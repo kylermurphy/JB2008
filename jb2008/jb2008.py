@@ -1,8 +1,12 @@
+
 import pandas as pd
 import numpy as np
 import numpy.typing as npt
 
 import swifter
+
+from pathlib import Path
+from os import path
 
 from astropy.coordinates import get_sun
 from astropy.time import Time
@@ -118,7 +122,10 @@ class jb2008():
         
         
         #data directory
-        self.direc = 'D:\\GitHub\\jb2008\\jb2008\\'
+        data_dir = Path(__file__).resolve()
+        data_dir = data_dir / '..' / 'swdata'
+        data_dir = data_dir.resolve()
+        self.direc = str(data_dir)
         t = pd.to_datetime(t)
         t = vectorize(t)
         lat = vectorize(lat)
@@ -354,8 +361,8 @@ class jb2008():
 
         """
         
-        swfile1 = self.direc + 'SOLFSMY.TXT'
-        swfile2 = self.direc + 'DTCFILE.TXT'
+        swfile1 = path.join(self.direc,'SOLFSMY.TXT')
+        swfile2 = path.join(self.direc,'DTCFILE.TXT')
         sw_data1 = np.loadtxt(swfile1,usecols=range(2,11))
         sw_data2 = np.loadtxt(swfile2,usecols=range(3,27),dtype=int)
     
