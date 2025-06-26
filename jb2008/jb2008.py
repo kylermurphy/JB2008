@@ -11,9 +11,9 @@ from os import path
 from astropy.coordinates import get_sun
 from astropy.time import Time
 
-from utils.utils import ydhms_days, vectorize
-from utils import Const
-from jb2008_subfuncs import jb2008_mod
+from .utils.utils import ydhms_days, vectorize
+from .utils import Const
+from .jb2008_subfuncs import jb2008_mod
 
 from tqdm import tqdm
 tqdm.pandas()
