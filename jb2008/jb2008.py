@@ -157,14 +157,25 @@ class jb2008():
         
         # load the swdata and get the required inputs
         swdata = self.read_sw()
-        swinput = np.array([self.get_sw(swdata,dt) for dt in AMJD])
+        
+        # find the unique values in AMJD  
+        # only get the swdata for the unique values
+        # mean to speed things up by reducing duplication
+        unq = np.unique(AMJD, return_index=True, return_inverse=True, return_counts=True)
+        swi = np.array([[self.get_sw(swdata,dt) for dt in unq[0]]]).squeeze()
+        
+        # use the indices of the unique AMJD array that can 
+        # reconstruct the full array to construct a full array
+        # of space weather inputs
+        swinput = np.zeros((AMJD.shape[0],swi.shape[1]))
+        swinput[:,:] = swi[unq[2],:]
+        
+        
         
         # create a dataframe of all the input data
         # this will allow for some parallel computing using 
         # pandas and swifter
         
-        # SUN = (sunpos.ra.rad,sunpos.dec.rad) -> tuple
-        # SAT = (sat_ra,np.deg2rad(lat),alt) -> tuple
         cols = ['F10','F10B','S10','S10B','M10','M10B','Y10','Y10B','DTCVAL'] 
         jb_df = pd.DataFrame(swinput,
                              columns=cols, dtype='float32')
