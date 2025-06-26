@@ -11,6 +11,7 @@ import pathlib
 import functools
 import shutil
 from datetime import datetime
+from dateutil import tz
 
 from tqdm import tqdm
 
@@ -105,7 +106,8 @@ def wf_mtime(url):
         if last_modified_header:
             # Parse the date string from the header
             # Example format: 'Wed, 21 Oct 2015 07:28:00 GMT'
-            return datetime.strptime(last_modified_header, '%a, %d %b %Y %H:%M:%S %Z')
+            return datetime.strptime(
+                last_modified_header, '%a, %d %b %Y %H:%M:%S %Z').replace(tzinfo=tz.gettz('GMT'))
         else:
             return None
     except requests.exceptions.RequestException as e:
