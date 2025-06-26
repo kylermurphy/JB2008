@@ -3,7 +3,8 @@
 from os import path, makedirs
 from pathlib import Path
 from datetime import datetime
-from utils.utils import dl_file, wf_mtime
+from dateutil import tz
+from .utils.utils import dl_file, wf_mtime
 
 def setup():
     
@@ -31,22 +32,29 @@ def setup():
        makedirs(data_path)
        
     if not path.exists(file1):
+        print('dl')
         dl_file(url1,file1)
         dl_file(url2,file2)
     else:
         #check for modification times
-        mod_file1 = datetime.fromtimestamp(path.getmtime(file1))
+        loc_tz = datetime.now().astimezone().tzinfo
+        gmt_tz = tz.gettz('GMT')
+        
+        mod_file1 = datetime.fromtimestamp(path.getmtime(file1), tz=loc_tz)
+        mod_file1 = mod_file1.astimezone(gmt_tz)
         mod_url1 = wf_mtime(url1)
         
-        mod_file2 = datetime.fromtimestamp(path.getmtime(file2))
+        mod_file2 = datetime.fromtimestamp(path.getmtime(file2), tz=loc_tz)
+        mod_file2 = mod_file1.astimezone(gmt_tz)
         mod_url2 = wf_mtime(url2)
         
         if mod_url1 > mod_file1:
             dl_file(url1,file1)
         if mod_url2 > mod_file2:
             dl_file(url2,file2)
-       
-       
+    
+    
+    return mod_file1, mod_url1
     
 
        
