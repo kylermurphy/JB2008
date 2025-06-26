@@ -10,6 +10,7 @@ def setup():
     
     print('Running Setup:')
     print('Checking for and downloading required files.')
+    print('...')
     
     url1 = 'https://sol.spacenvironment.net/JB2008/indices/SOLFSMY.TXT'
     url2 = 'https://sol.spacenvironment.net/JB2008/indices/DTCFILE.TXT' 
