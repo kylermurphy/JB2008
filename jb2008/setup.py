@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
-import requests
-
-
 from os import path, makedirs
 from pathlib import Path
 from datetime import datetime
 from utils.utils import dl_file, wf_mtime
 
 def setup():
+    
+    print('Running Setup:')
+    print('Checking for and downloading required files.')
     
     url1 = 'https://sol.spacenvironment.net/JB2008/indices/SOLFSMY.TXT'
     url2 = 'https://sol.spacenvironment.net/JB2008/indices/DTCFILE.TXT' 
@@ -35,11 +35,17 @@ def setup():
         dl_file(url2,file2)
     else:
         #check for modification times
-        modified_time = datetime.fromtimestamp(path.getmtime(swfile1))
-    
+        mod_file1 = datetime.fromtimestamp(path.getmtime(file1))
+        mod_url1 = wf_mtime(url1)
         
+        mod_file2 = datetime.fromtimestamp(path.getmtime(file2))
+        mod_url2 = wf_mtime(url2)
+        
+        if mod_url1 > mod_file1:
+            dl_file(url1,file1)
+        if mod_url2 > mod_file2:
+            dl_file(url2,file2)
        
-    return file1, file2
        
     
 
