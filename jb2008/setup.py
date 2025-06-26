@@ -53,9 +53,6 @@ def setup():
         if mod_url2 > mod_file2:
             dl_file(url2,file2)
     
-    
-    return mod_file1, mod_url1
-    
 
        
     
