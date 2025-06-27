@@ -25,8 +25,8 @@ def ydhms_days(t_ob):
     days = ydhms_das(t_ob)
     '''
     
-    t_arr = np.array([np.array(t.yday.split(':'),dtype=float)
-             for t in t_ob])
+    t_arr = np.array([np.array(t.split(':'),dtype=float)
+             for t in t_ob.yday])
     
     days = t_arr[:,1]+t_arr[:,2]/24. + t_arr[:,3]/1440. + t_arr[:,4]/86400. - 1
     

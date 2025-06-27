@@ -11,9 +11,9 @@ from os import path
 from astropy.coordinates import get_sun
 from astropy.time import Time
 
-from .utils.utils import ydhms_days, vectorize
-from .utils import Const
-from .jb2008_subfuncs import jb2008_mod
+from utils.utils import ydhms_days, vectorize
+from utils import Const
+from jb2008_subfuncs import jb2008_mod
 
 from tqdm import tqdm
 tqdm.pandas()
@@ -162,7 +162,7 @@ class jb2008():
         # only get the swdata for the unique values
         # mean to speed things up by reducing duplication
         unq = np.unique(AMJD, return_index=True, return_inverse=True, return_counts=True)
-        swi = np.array([[self.get_sw(swdata,dt) for dt in unq[0]]]).squeeze()
+        swi = np.array([[self.get_sw(swdata[0],swdata[1],dt) for dt in unq[0]]]).squeeze()
         
         # use the indices of the unique AMJD array that can 
         # reconstruct the full array to construct a full array
@@ -189,6 +189,8 @@ class jb2008():
         jb_df['SAT_ALT'] = alt
         
         self.dat = jb_df
+        self.amjd = AMJD
+        self.t_ob = t_ob
         
     
     def predict(self):
@@ -300,7 +302,7 @@ class jb2008():
         
     
     
-    def get_sw(self, sw_data,t_mjd):
+    def get_sw(self, sw_data1, sw_data2,t_mjd):
         """
         Extract the necessary parameters describing the solar activity 
         and geomagnetic activity from the space weather data.
@@ -335,7 +337,6 @@ class jb2008():
             Temperature change computed from Dst index
         """
 
-        sw_data1,sw_data2 = sw_data
         sw_mjd = sw_data1[:,0] - 2400000.5
         J_, = np.where(sw_mjd-0.5 < t_mjd)
         j = J_[-1]
