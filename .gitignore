@@ -195,3 +195,4 @@ cython_debug/
 
 # Ignore the data directory
 swdata/
+jb2008/test.py
