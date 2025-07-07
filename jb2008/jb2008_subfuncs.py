@@ -3,7 +3,7 @@
 import numpy as np
 from numba import jit
 
-from utils import Const
+from jb2008.utils import Const
 
 @jit(nopython=True)
 def jb2008_mod(AMJD,YRDAY,SUN,SAT,F10,F10B,S10,S10B,M10,M10B,Y10,Y10B,DSTDTC):
