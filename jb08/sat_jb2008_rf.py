@@ -2,22 +2,8 @@ import os, sys
 import pandas as pd
 import numpy as np
 
-from swifter import set_defaults
-set_defaults(
-    npartitions=None,
-    dask_threshold=1,
-    scheduler="processes",
-    progress_bar=True,
-    progress_bar_desc=None,
-    allow_dask_on_strings=False,
-    force_parallel=True,
-)
 
-
-jb_path = "D:\\GitHub\\jb2008\\jb2008"
-sys.path.append(os.path.dirname(jb_path))
-
-from jb2008.jb2008 import jb2008
+import jb08
 
 def jb08_prof(fn='D:/data/SatDensities/satdrag_database_grace_B_v3.hdf5',
               fo=False,
@@ -53,12 +39,12 @@ def jb08_prof(fn='D:/data/SatDensities/satdrag_database_grace_B_v3.hdf5',
         lon_pre, _ = np.meshgrid(df['lon'],alts, indexing = 'xy')
         
         # modeled density profile
-        jb_alt = jb2008(t=dt_pre.flatten(),lat=lat_pre.flatten(),
+        jb_alt = jb08.jb2008(t=dt_pre.flatten(),lat=lat_pre.flatten(),
                 lon=lat_pre.flatten(),alt=alt_pre.flatten())
         jb_alt.predict()
         
         # modeled density at the satellite
-        jb_gr = jb2008(t=df['DateTime_gr'],lat=df['lat'],lon=df['lon'],alt=df['alt']/1000.)
+        jb_gr = jb08.jb2008(t=df['DateTime_gr'],lat=df['lat'],lon=df['lon'],alt=df['alt']/1000.)
         jb_gr.predict()
         
         # grab the densities
@@ -97,7 +83,7 @@ def jb08_prof(fn='D:/data/SatDensities/satdrag_database_grace_B_v3.hdf5',
         
     return df_wr, den_cm, den_df, jb_alt, jb_gr
     
-p_df, jb_gr, jb_alt =  jb08_prof(chunk_size=1000, small_batch=True)   
+df_wr, den_cm, den_df, jb_alt, jb_gr =  jb08_prof(chunk_size=750, small_batch=True)   
         
         
         
