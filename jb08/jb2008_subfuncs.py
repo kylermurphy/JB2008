@@ -68,26 +68,33 @@ def jb2008_mod(AMJD,YRDAY,SUN,SAT,F10,F10B,S10,S10B,M10,M10B,Y10,Y10B,DSTDTC):
 
     # The FRAC are the assumed sea-level volume fractions 
     # in order: N2, O2, Ar, and He
-    FRAC = np.array([0.7811,0.20955,9.34e-3,1.289e-5])
+    FRAC = np.array([0.78110,0.20955,9.3400e-3,1.2890e-5])
 
     # RSTAR is the universal gas-constant in mks units (joules/K/kmol)
     RSTAR = Const.rstar
 
     # The R# are values used to establish height step sizes in the 
     # regimes 90km to 105km, 105km to 500km and 500km upward.
-    R1,R2,R3 = 0.01,0.025,0.075
+    R1,R2,R3 = 0.010,0.025,0.075
 
     # The WT are weights for the Newton-Cotes Five-Point Quad. formula
     WT = np.array([7,32,12,32,7])*2/45
+    # Change to match the fortran code exactly
+    WT[0] = 0.311111111111111
+    WT[1] = 1.422222222222222
+    WT[2] = 0.533333333333333
+    WT[3] = 1.422222222222222
+    WT[4] = 0.311111111111111
 
     # The CHT are coefficients for high altitude density correction
     CHT = np.array([0.22,-0.2e-2,0.115e-2,-0.211e-5])
+
     DEGRAD  =  Const.degrad 
 
     # Equation (14)
     FN = (F10B/240)**0.25
     if FN > 1: FN = 1
-    FSB = F10B*FN + S10B*(1 - FN)
+    FSB = F10B*FN + S10B*(1. - FN)
     TSUBC = 392.4 + 3.227*FSB + 0.298*(F10-F10B) + 2.259*(S10-S10B) + 0.312*(M10-M10B) + 0.178*(Y10-Y10B)
 
     # Equation (15)
@@ -170,7 +177,7 @@ def jb2008_mod(AMJD,YRDAY,SUN,SAT,F10,F10B,S10,S10B,M10,M10B,Y10,Y10B,DSTDTC):
     AN = ANM/AMBAR2
 
     # Equation (3)
-    FACT2  = ANM/28.96
+    FACT2  = ANM/28.960
     ALN = np.zeros(6)
     ALN[0] = np.log(FRAC[0]*FACT2)
     ALN[3] = np.log(FRAC[2]*FACT2)
@@ -337,7 +344,8 @@ def DTSUB (F10,XLST,XLAT,ZHT):
                    1106.51308, -174.378996,  1885.94601,\
                    -7093.71517,  9224.54523, -3845.08073,\
                    -6.45841789,  40.9703319, -482.006560,\
-                   1818.70931, -2373.89204,  996.703815,36.1416936])
+                   1818.70931, -2373.89204,  996.703815,\
+                   36.1416936])
     C = np.array([-15.5986211, -5.12114909, -69.3003609,\
                   203.716701,  703.316291, -1943.49234,\
                   1106.51308, -220.835117,  1432.56989,\
