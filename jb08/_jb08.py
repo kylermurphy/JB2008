@@ -99,8 +99,8 @@ class jb2008():
                  t: npt.ArrayLike=['2001-01-01'], 
                  lat: npt.ArrayLike=np.array([0]), 
                  lon: npt.ArrayLike=np.array([0]), 
-                 alt: npt.ArrayLike=np.array([400])
-                 ):
+                 alt: npt.ArrayLike=np.array([400]),
+                 dtype: str='float32'):
         """
         Initializing the jb2008 class.
 
@@ -137,9 +137,9 @@ class jb2008():
         if not len(t) == len(lat) == len(lon) == len(alt):
             t, lat, lon, alt = np.meshgrid(t,lat,lon,alt)
             t = t.flatten()
-            lat = lat.flatten().astype('float32')
-            lon = lon.flatten().astype('float32')
-            alt = alt.flatten().astype('float32')        
+            lat = lat.flatten().astype(dtype)
+            lon = lon.flatten().astype(dtype)
+            alt = alt.flatten().astype(dtype)        
         
         
         #setup arrays we need
@@ -178,20 +178,22 @@ class jb2008():
         
         cols = ['F10','F10B','S10','S10B','M10','M10B','Y10','Y10B','DTCVAL'] 
         jb_df = pd.DataFrame(swinput,
-                             columns=cols, dtype='float32')
+                             columns=cols, dtype=dtype)
         
         jb_df['AMJD'] = AMJD
         jb_df['YRDAY'] = YRDAY
-        jb_df['SUN_RA'] = np.array(sunpos.ra.rad, dtype='float32')
-        jb_df['SUN_DEC'] = np.array(sunpos.dec.rad, dtype='float32')
-        jb_df['SAT_RA'] = np.array(sat_ra, dtype='float32')
-        jb_df['SAT_LAT'] = np.deg2rad(lat, dtype='float32')
+        jb_df['SUN_RA'] = np.array(sunpos.ra.rad, dtype=dtype)
+        jb_df['SUN_DEC'] = np.array(sunpos.dec.rad, dtype=dtype)
+        jb_df['SAT_RA'] = np.array(sat_ra, dtype=dtype)
+        jb_df['SAT_LAT'] = np.deg2rad(lat, dtype=dtype)
+        jb_df['SAT_LON'] = np.deg2rad(lon, dtype=dtype)
         jb_df['SAT_ALT'] = alt
         
         self.dat = jb_df
-        self.amjd = AMJD
-        self.t_ob = t_ob
-        
+        self.lat = lat
+        self.lon = lon
+        self.t = t
+        self.alt = alt
     
     def predict(self):
         """
@@ -301,7 +303,6 @@ class jb2008():
         return [np.float32(den), np.float32(temp[1]), np.float32(temp[0])]
         
     
-    @jit(nopython=True)
     def get_sw(self, sw_data1, sw_data2,t_mjd):
         """
         Extract the necessary parameters describing the solar activity 
