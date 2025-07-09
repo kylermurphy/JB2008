@@ -6,6 +6,7 @@ import swifter
 
 from pathlib import Path
 from os import path
+from numba import jit
 
 from astropy.coordinates import get_sun
 from astropy.time import Time
@@ -43,8 +44,8 @@ class jb2008():
 
     Usage
     -----
-    jb08 = jb2008(t,lat,lon,alt)
-    jb08.predict_den()
+    jb = jb08.jb2008(t,lat,lon,alt)
+    jb.predict_den()
     
     jb08.dat.head()
 
@@ -65,7 +66,7 @@ class jb2008():
 
     Returns
     -------
-    jb08 -> instance of class jb2008, where its attributes include
+    jb -> instance of class jb2008, where its attributes include
                                                                     
         dat -> pd.DataFrame
             DataFrame contianing the inputs to the jb2008 model.
@@ -80,13 +81,13 @@ class jb2008():
             
     Examples
     --------
-    >>> from jb2008 import jb2008
+    >>> import jb08
     >>>
     >>> 
     >>> t = '2014-07-22 22:18:45' # time(UTC) 
     >>> lat,lon,alt = 25,102,600 # latitude, longitude in [degree], and altitude in [km]
-    >>> jb08 = jb2008(t,lat,lon,alt)
-    >>> jb08.predict()
+    >>> jb = jb08.jb2008(t,lat,lon,alt)
+    >>> jb.predict()
     >>>
     >>>
     >>> print(jb08.dat['DEN']) # [kg/m^3]
@@ -300,7 +301,7 @@ class jb2008():
         return [np.float32(den), np.float32(temp[1]), np.float32(temp[0])]
         
     
-    
+    @jit(nopython=True)
     def get_sw(self, sw_data1, sw_data2,t_mjd):
         """
         Extract the necessary parameters describing the solar activity 
