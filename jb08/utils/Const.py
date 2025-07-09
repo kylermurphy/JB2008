@@ -19,7 +19,7 @@ al10 = np.log(10)
 
 avogad = 6.02257e26 # The Avogadro's number in mks units (molecules/kmol)
 pivo2 = 1.5707963
-pivo4 = 1.5707963  
+pivo4 = 0.78539816 
 
 rstar = 8314.32 # The universal gas-constant in mks units (joules/K/kmol)
 
