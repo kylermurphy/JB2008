@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 import numpy as np
-from numba import jit
+from numba import jit, vectorize
 
 from .utils import Const
 
-@jit(nopython=True)
+@vectorize()
+#@jit(nopython=True)
 def jb2008_mod(AMJD,YRDAY,SUN,SAT,F10,F10B,S10,S10B,M10,M10B,Y10,Y10B,DSTDTC):
     '''
     Jacchia-Bowman 2008 Model Atmosphere
