@@ -6,14 +6,21 @@ import swifter
 
 from pathlib import Path
 from os import path
-from numba import jit
+from joblib import Parallel, delayed, cpu_count
 
 from astropy.coordinates import get_sun
 from astropy.time import Time
 
 from .utils.utils import ydhms_days, vectorize
 from .utils import Const
+
 from .jb2008_subfuncs import jb2008_mod
+
+try: 
+    from .jb2008_subfuncs_cy import jb2008_mod_cy
+    cyload = True
+except:
+    cyload = False
 
 from tqdm import tqdm
 tqdm.pandas()
@@ -100,7 +107,8 @@ class jb2008():
                  lat: npt.ArrayLike=np.array([0]), 
                  lon: npt.ArrayLike=np.array([0]), 
                  alt: npt.ArrayLike=np.array([400]),
-                 dtype: str='float32'):
+                 dtype: str='float32', cython=False,
+                 para_job=False, njobs=False, use_map=True):
         """
         Initializing the jb2008 class.
 
@@ -119,7 +127,14 @@ class jb2008():
             Altitude in km. 
             The default is np.array([400]).
         """
+
+        self.use_map = use_map
         
+        if cython & cyload:
+            print('Using cython functions')
+            jb2008_mod = jb2008_mod_cy 
+        elif cython:
+            print('Could not load cython function, reverting to normal')
         
         #data directory
         data_dir = Path(__file__).resolve()
@@ -141,19 +156,85 @@ class jb2008():
             lon = lon.flatten().astype(dtype)
             alt = alt.flatten().astype(dtype)        
         
-        
         #setup arrays we need
-        t_ob = Time(t,location=(lon,lat))
-        AMJD = t_ob.mjd
+
+        # get time 
+        # get AMJD
+        # get sun position
+        # this can be slow when predicting large numbers
+        # allow for a slightly brute force parrallel processing approach
+        # break t_ob into smaller subset of arrays and use joblib parallel
+        # on the smaller arrays to derive sun position
+        if para_job:
+            n_par = njobs if njobs else cpu_count()-4
+            if n_par < 0:
+                raise Exception(f'Number of jobs must be positve: {n_par}')
+            
+            print(f'Parallelizing portions of the code with {n_par} processes.')
+
+            with Parallel(n_jobs=n_par) as parallel:
+                # split the time, lat, lon arrays to utilize multiple processors
+                t_s = np.array_split(t,n_par)
+                lat_s = np.array_split(lat,n_par)
+                lon_s = np.array_split(lon,n_par)
+
+                t_par = parallel(delayed(Time)(t_i, location=(lon_i,lat_i)) 
+                                for t_i, lat_i, lon_i in zip(t_s,lat_s,lon_s))
+                
+                # unwrap the time array and calculate MJD and sat position
+                #t_ob = np.array([el for li in t_par for el in li])
+                AMJD = np.array([el for li in t_par for el in li.mjd])
+                #get satellite position
+                sat_ra = np.array([el for li in t_par for el in li.sidereal_time('mean').rad])
+
+                # year day parallel 
+                YRDAY = parallel(delayed(ydhms_days)(i) for i in t_par)
+                YRDAY = np.array([el for li in YRDAY for el in li]) 
+
+                # sun position parallel 
+                ra = []
+                dec = []
+                dat = parallel(delayed(get_sun)(i) for i in t_par)
+
+                # unwrap the sun position array and get declination
+                # and right ascension
+                [[ra.extend(s.ra.rad),dec.extend(s.dec.rad)] for s in dat];
+
+                sun_dec = np.array(dec)
+                sun_ra = np.array(ra)
+
+            # simple check to make sure everthing worked
+            pos = [0,-1]
+            t_test = Time(t[[pos]], location=(lon[pos],lat[pos]))
+            a_test = t_test.mjd
+            
+            sun_test = get_sun(t_test)
+            t_ra = sun_test.ra.rad
+            t_dec = sun_test.dec.rad
+            
+            if not (AMJD[pos]==a_test).all():
+                raise Exception('AMJD not matching')
+
+            if not (sun_dec[pos]==t_dec).all() or not (sun_ra[pos]==t_ra).all():
+                raise Exception('Declenations and Right Ascension do not match')
+
+        else:
+            print('Normal')
+            t_ob = Time(t,location=(lon,lat))
+            AMJD = t_ob.mjd
+            
+            #convert each time to decimal day
+            YRDAY = ydhms_days(t_ob)
+            
+            sunpos = get_sun(t_ob)
+            sun_ra = sunpos.ra.rad
+            sun_dec = sunpos.dec.rad
+
+            #get satellite position
+            sat_ra = t_ob.sidereal_time('mean').rad
+
         
-        #convert each time to decimal day
-        YRDAY = ydhms_days(t_ob)
         
-        #get sun position
-        sunpos = get_sun(t_ob)
-        
-        #get satellite position
-        sat_ra = t_ob.sidereal_time('mean').rad
         
         # load the swdata and get the required inputs
         swdata = self.read_sw()
@@ -182,8 +263,8 @@ class jb2008():
         
         jb_df['AMJD'] = AMJD
         jb_df['YRDAY'] = YRDAY
-        jb_df['SUN_RA'] = np.array(sunpos.ra.rad, dtype=dtype)
-        jb_df['SUN_DEC'] = np.array(sunpos.dec.rad, dtype=dtype)
+        jb_df['SUN_RA'] = np.array(sun_ra, dtype=dtype)
+        jb_df['SUN_DEC'] = np.array(sun_dec, dtype=dtype)
         jb_df['SAT_RA'] = np.array(sat_ra, dtype=dtype)
         jb_df['SAT_LAT'] = np.deg2rad(lat, dtype=dtype)
         jb_df['SAT_LON'] = np.deg2rad(lon, dtype=dtype)
@@ -208,13 +289,23 @@ class jb2008():
         Adds DEN, TEMP, EXO_TEMP to the dat DataFrame
         
         """
-        
-        if self.dat.shape[0] < 1000:
+        if self.use_map:
+            self.dat[['DEN','TEMP','EXO_TEMP']] = \
+                np.array(list(tqdm(map(self.den_temp, self.dat['AMJD'], self.dat['YRDAY'], 
+                        self.dat['SUN_RA'], self.dat['SUN_DEC'], self.dat['SAT_RA'],
+                        self.dat['SAT_LAT'], self.dat['SAT_ALT'],
+                        self.dat['F10'], self.dat['F10B'], 
+                        self.dat['S10'], self.dat['S10B'],
+                        self.dat['M10'], self.dat['M10B'], 
+                        self.dat['Y10'], self.dat['Y10B'],
+                        self.dat['DTCVAL']), total=self.dat.shape[0])))
+
+        elif self.dat.shape[0] < 1000:
             self.dat[['DEN','TEMP','EXO_TEMP']] = \
                 self.dat.progress_apply(lambda x : 
                                         self.den_temp(x.AMJD, x.YRDAY,
-                                        (x.SUN_RA,x.SUN_DEC),
-                                        (x.SAT_RA,x.SAT_LAT,x.SAT_ALT),
+                                        x.SUN_RA,x.SUN_DEC,
+                                        x.SAT_RA,x.SAT_LAT,x.SAT_ALT,
                                         x.F10,x.F10B,x.S10,x.S10B,
                                         x.M10,x.M10B,x.Y10,x.Y10B,
                                         x.DTCVAL),
@@ -224,8 +315,8 @@ class jb2008():
             self.dat[['DEN','TEMP','EXO_TEMP']] = \
                 self.dat.swifter.apply(lambda x : 
                                        self.den_temp(x.AMJD, x.YRDAY,
-                                       (x.SUN_RA,x.SUN_DEC),
-                                       (x.SAT_RA,x.SAT_LAT,x.SAT_ALT),
+                                       x.SUN_RA,x.SUN_DEC,
+                                       x.SAT_RA,x.SAT_LAT,x.SAT_ALT,
                                        x.F10,x.F10B,x.S10,x.S10B,
                                        x.M10,x.M10B,x.Y10,x.Y10B,
                                        x.DTCVAL),
@@ -235,8 +326,11 @@ class jb2008():
                                         
 
     
-    def den_temp(self,AMJD,YRDAY,SUN,SAT,F10,F10B,S10,S10B,
-                           M10,M10B,Y10,Y10B,DSTDTC):
+    def den_temp(self,AMJD,YRDAY,
+                 SUN_RA,SUN_DEC,
+                 SAT_RA,SAT_LAT,SAT_ALT,
+                 F10,F10B,S10,S10B,
+                 M10,M10B,Y10,Y10B,DSTDTC):
         """
         Wrapper for the jb2008 model function.
         
@@ -294,7 +388,8 @@ class jb2008():
         """
         
         try:
-            temp, den = jb2008_mod(AMJD,YRDAY,SUN,SAT,F10,F10B,S10,S10B,
+            temp, den = jb2008_mod(AMJD,YRDAY,SUN_RA,SUN_DEC,
+                                   SAT_RA, SAT_LAT, SAT_ALT,F10,F10B,S10,S10B,
                                    M10,M10B,Y10,Y10B,DSTDTC)
         except:
             den = np.nan
