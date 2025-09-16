@@ -1,3 +1,5 @@
+#cythonize JB2008
+
 
 from libc.math cimport sin, cos, fabs, exp, log, log10, copysign, atan
 from libc.math cimport pi
