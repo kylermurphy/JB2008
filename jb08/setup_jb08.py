@@ -49,9 +49,16 @@ def setup():
         mod_file2 = mod_file1.astimezone(gmt_tz)
         mod_url2 = wf_mtime(url2)
         
-        if mod_url1 > mod_file1:
+        if mod_url1 == None:
+            print(f'Could not determine modification time of {url1}')
+        elif mod_url1 > mod_file1:
+            print(f'Downloading new version of {url1}')
             dl_file(url1,file1)
-        if mod_url2 > mod_file2:
+        
+        if mod_url2 == None:
+            print(f'Could not determine modification time of {url2}')
+        elif mod_url2 > mod_file2:
+            print(f'Downloading new version of {url2}')
             dl_file(url2,file2)
     
 

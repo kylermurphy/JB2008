@@ -1532,7 +1532,7 @@ static CYTHON_INLINE __pyx_t_double_complex __pyx_t_double_complex_from_parts(do
 struct __pyx_ctuple_double__and_double__and_double;
 typedef struct __pyx_ctuple_double__and_double__and_double __pyx_ctuple_double__and_double__and_double;
 
-/* "jb08/jb2008_subfuncs_cy.pyx":466
+/* "jb08/jb2008_subfuncs_cy.pyx":468
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef (double, double, double) SEMIAN08_cy(double DAY,double HT,double F10B,double S10B, double M10B):             # <<<<<<<<<<<<<<
@@ -2628,7 +2628,7 @@ static CYTHON_INLINE PyObject *__Pyx_carray_to_tuple_double(double *__pyx_v_v, P
   return __pyx_r;
 }
 
-/* "jb08/jb2008_subfuncs_cy.pyx":12
+/* "jb08/jb2008_subfuncs_cy.pyx":14
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cpdef jb2008_mod_cy(double AMJD, double YRDAY,             # <<<<<<<<<<<<<<
@@ -2761,7 +2761,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("jb2008_mod_cy", 1);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":60
+  /* "jb08/jb2008_subfuncs_cy.pyx":62
  * 
  *     # The alpha are the thermal diffusion coefficients in Eq. (6)
  *     cdef double[2] TEMP = [0., 0.]             # <<<<<<<<<<<<<<
@@ -2772,7 +2772,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_1[1] = 0.;
   memcpy(&(__pyx_v_TEMP[0]), __pyx_t_1, sizeof(__pyx_v_TEMP[0]) * (2));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":61
+  /* "jb08/jb2008_subfuncs_cy.pyx":63
  *     # The alpha are the thermal diffusion coefficients in Eq. (6)
  *     cdef double[2] TEMP = [0., 0.]
  *     cdef double[5] ALPHA = [0., 0., 0., 0., 0.]             # <<<<<<<<<<<<<<
@@ -2786,7 +2786,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_2[4] = 0.;
   memcpy(&(__pyx_v_ALPHA[0]), __pyx_t_2, sizeof(__pyx_v_ALPHA[0]) * (5));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":62
+  /* "jb08/jb2008_subfuncs_cy.pyx":64
  *     cdef double[2] TEMP = [0., 0.]
  *     cdef double[5] ALPHA = [0., 0., 0., 0., 0.]
  *     ALPHA[4] = -0.38             # <<<<<<<<<<<<<<
@@ -2795,7 +2795,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_ALPHA[4]) = -0.38;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":65
+  /* "jb08/jb2008_subfuncs_cy.pyx":67
  * 
  *     # AL10 is DLOG(10.0)
  *     cdef double AL10 = log(10)             # <<<<<<<<<<<<<<
@@ -2804,7 +2804,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_AL10 = log(10.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":68
+  /* "jb08/jb2008_subfuncs_cy.pyx":70
  * 
  *     # The AMW are the molecular weights in order: N2, O2, O, Ar, He & H
  *     cdef double[6] AMW = [28.0134,31.9988,15.9994,39.9480,4.0026,1.00797]             # <<<<<<<<<<<<<<
@@ -2819,7 +2819,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_3[5] = 1.00797;
   memcpy(&(__pyx_v_AMW[0]), __pyx_t_3, sizeof(__pyx_v_AMW[0]) * (6));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":71
+  /* "jb08/jb2008_subfuncs_cy.pyx":73
  * 
  *     # AVOGAD is Avogadro's number in mks units (molecules/kmol)
  *     cdef double AVOGAD = 6.02257e26             # <<<<<<<<<<<<<<
@@ -2828,7 +2828,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_AVOGAD = 6.02257e26;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":73
+  /* "jb08/jb2008_subfuncs_cy.pyx":75
  *     cdef double AVOGAD = 6.02257e26
  * 
  *     cdef double PI = pi             # <<<<<<<<<<<<<<
@@ -2837,7 +2837,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_PI = M_PI;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":74
+  /* "jb08/jb2008_subfuncs_cy.pyx":76
  * 
  *     cdef double PI = pi
  *     cdef double TWOPI = 2.*pi             # <<<<<<<<<<<<<<
@@ -2846,7 +2846,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_TWOPI = (2. * M_PI);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":75
+  /* "jb08/jb2008_subfuncs_cy.pyx":77
  *     cdef double PI = pi
  *     cdef double TWOPI = 2.*pi
  *     cdef double FOURPI = 4.*pi             # <<<<<<<<<<<<<<
@@ -2855,7 +2855,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_FOURPI = (4. * M_PI);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":76
+  /* "jb08/jb2008_subfuncs_cy.pyx":78
  *     cdef double TWOPI = 2.*pi
  *     cdef double FOURPI = 4.*pi
  *     cdef double PIOV2 = pi/2.             # <<<<<<<<<<<<<<
@@ -2864,7 +2864,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_PIOV2 = (((double)M_PI) / 2.);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":77
+  /* "jb08/jb2008_subfuncs_cy.pyx":79
  *     cdef double FOURPI = 4.*pi
  *     cdef double PIOV2 = pi/2.
  *     cdef double PIOV4 = pi/4.             # <<<<<<<<<<<<<<
@@ -2873,7 +2873,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_PIOV4 = (((double)M_PI) / 4.);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":81
+  /* "jb08/jb2008_subfuncs_cy.pyx":83
  *     # The FRAC are the assumed sea-level volume fractions
  *     # in order: N2, O2, Ar, and He
  *     cdef double[4] FRAC = [0.78110,0.20955,9.3400e-3,1.2890e-5]             # <<<<<<<<<<<<<<
@@ -2886,7 +2886,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_4[3] = 1.2890e-5;
   memcpy(&(__pyx_v_FRAC[0]), __pyx_t_4, sizeof(__pyx_v_FRAC[0]) * (4));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":84
+  /* "jb08/jb2008_subfuncs_cy.pyx":86
  * 
  *     # RSTAR is the universal gas-constant in mks units (joules/K/kmol)
  *     cdef double RSTAR = 8314.32             # <<<<<<<<<<<<<<
@@ -2895,7 +2895,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_RSTAR = 8314.32;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":88
+  /* "jb08/jb2008_subfuncs_cy.pyx":90
  *     # The R# are values used to establish height step sizes in the
  *     # regimes 90km to 105km, 105km to 500km and 500km upward.
  *     cdef double R1 = 0.010             # <<<<<<<<<<<<<<
@@ -2904,7 +2904,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_R1 = 0.010;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":89
+  /* "jb08/jb2008_subfuncs_cy.pyx":91
  *     # regimes 90km to 105km, 105km to 500km and 500km upward.
  *     cdef double R1 = 0.010
  *     cdef double R2 = 0.025             # <<<<<<<<<<<<<<
@@ -2913,7 +2913,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_R2 = 0.025;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":90
+  /* "jb08/jb2008_subfuncs_cy.pyx":92
  *     cdef double R1 = 0.010
  *     cdef double R2 = 0.025
  *     cdef double R3 = 0.075             # <<<<<<<<<<<<<<
@@ -2922,7 +2922,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_R3 = 0.075;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":93
+  /* "jb08/jb2008_subfuncs_cy.pyx":95
  * 
  *     # The WT are weights for the Newton-Cotes Five-Point Quad. formula
  *     cdef double[5] WT = [0.,0.,0.,0.,0.]             # <<<<<<<<<<<<<<
@@ -2936,7 +2936,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_5[4] = 0.;
   memcpy(&(__pyx_v_WT[0]), __pyx_t_5, sizeof(__pyx_v_WT[0]) * (5));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":95
+  /* "jb08/jb2008_subfuncs_cy.pyx":97
  *     cdef double[5] WT = [0.,0.,0.,0.,0.]
  *     # Change to match the fortran code exactly
  *     WT[0] = 0.311111111111111             # <<<<<<<<<<<<<<
@@ -2945,7 +2945,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_WT[0]) = 0.311111111111111;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":96
+  /* "jb08/jb2008_subfuncs_cy.pyx":98
  *     # Change to match the fortran code exactly
  *     WT[0] = 0.311111111111111
  *     WT[1] = 1.422222222222222             # <<<<<<<<<<<<<<
@@ -2954,7 +2954,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_WT[1]) = 1.422222222222222;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":97
+  /* "jb08/jb2008_subfuncs_cy.pyx":99
  *     WT[0] = 0.311111111111111
  *     WT[1] = 1.422222222222222
  *     WT[2] = 0.533333333333333             # <<<<<<<<<<<<<<
@@ -2963,7 +2963,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_WT[2]) = 0.533333333333333;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":98
+  /* "jb08/jb2008_subfuncs_cy.pyx":100
  *     WT[1] = 1.422222222222222
  *     WT[2] = 0.533333333333333
  *     WT[3] = 1.422222222222222             # <<<<<<<<<<<<<<
@@ -2972,7 +2972,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_WT[3]) = 1.422222222222222;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":99
+  /* "jb08/jb2008_subfuncs_cy.pyx":101
  *     WT[2] = 0.533333333333333
  *     WT[3] = 1.422222222222222
  *     WT[4] = 0.311111111111111             # <<<<<<<<<<<<<<
@@ -2981,7 +2981,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_WT[4]) = 0.311111111111111;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":102
+  /* "jb08/jb2008_subfuncs_cy.pyx":104
  * 
  *     # The CHT are coefficients for high altitude density correction
  *     cdef double[4] CHT = [0.22,-0.2e-2,0.115e-2,-0.211e-5]             # <<<<<<<<<<<<<<
@@ -2994,7 +2994,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_6[3] = -0.211e-5;
   memcpy(&(__pyx_v_CHT[0]), __pyx_t_6, sizeof(__pyx_v_CHT[0]) * (4));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":104
+  /* "jb08/jb2008_subfuncs_cy.pyx":106
  *     cdef double[4] CHT = [0.22,-0.2e-2,0.115e-2,-0.211e-5]
  * 
  *     cdef double DEGRAD  =  pi / 180.             # <<<<<<<<<<<<<<
@@ -3003,7 +3003,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_DEGRAD = (((double)M_PI) / 180.);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":107
+  /* "jb08/jb2008_subfuncs_cy.pyx":109
  * 
  *     # Equation (14)
  *     cdef double FN = (F10B/240)**0.25             # <<<<<<<<<<<<<<
@@ -3012,7 +3012,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_FN = pow((__pyx_v_F10B / 240.0), 0.25);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":108
+  /* "jb08/jb2008_subfuncs_cy.pyx":110
  *     # Equation (14)
  *     cdef double FN = (F10B/240)**0.25
  *     if FN > 1: FN = 1             # <<<<<<<<<<<<<<
@@ -3024,7 +3024,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_v_FN = 1.0;
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":109
+  /* "jb08/jb2008_subfuncs_cy.pyx":111
  *     cdef double FN = (F10B/240)**0.25
  *     if FN > 1: FN = 1
  *     FSB = F10B*FN + S10B*(1. - FN)             # <<<<<<<<<<<<<<
@@ -3033,7 +3033,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_FSB = ((__pyx_v_F10B * __pyx_v_FN) + (__pyx_v_S10B * (1. - __pyx_v_FN)));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":110
+  /* "jb08/jb2008_subfuncs_cy.pyx":112
  *     if FN > 1: FN = 1
  *     FSB = F10B*FN + S10B*(1. - FN)
  *     TSUBC = 392.4 + 3.227*FSB + 0.298*(F10-F10B) + 2.259*(S10-S10B) + 0.312*(M10-M10B) + 0.178*(Y10-Y10B)             # <<<<<<<<<<<<<<
@@ -3042,7 +3042,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_TSUBC = (((((392.4 + (3.227 * __pyx_v_FSB)) + (0.298 * (__pyx_v_F10 - __pyx_v_F10B))) + (2.259 * (__pyx_v_S10 - __pyx_v_S10B))) + (0.312 * (__pyx_v_M10 - __pyx_v_M10B))) + (0.178 * (__pyx_v_Y10 - __pyx_v_Y10B)));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":113
+  /* "jb08/jb2008_subfuncs_cy.pyx":115
  * 
  *     # Equation (15)
  *     ETA = fabs(SAT_LAT - SUN_DEC)/2             # <<<<<<<<<<<<<<
@@ -3051,7 +3051,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_ETA = (fabs((__pyx_v_SAT_LAT - __pyx_v_SUN_DEC)) / 2.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":114
+  /* "jb08/jb2008_subfuncs_cy.pyx":116
  *     # Equation (15)
  *     ETA = fabs(SAT_LAT - SUN_DEC)/2
  *     THETA = fabs(SAT_LAT + SUN_DEC)/2             # <<<<<<<<<<<<<<
@@ -3060,7 +3060,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_THETA = (fabs((__pyx_v_SAT_LAT + __pyx_v_SUN_DEC)) / 2.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":117
+  /* "jb08/jb2008_subfuncs_cy.pyx":119
  * 
  *     # Equation (16)
  *     H = SAT_RA - SUN_RA             # <<<<<<<<<<<<<<
@@ -3069,7 +3069,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_H = (__pyx_v_SAT_RA - __pyx_v_SUN_RA);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":118
+  /* "jb08/jb2008_subfuncs_cy.pyx":120
  *     # Equation (16)
  *     H = SAT_RA - SUN_RA
  *     TAU = H - 0.64577182 + 0.10471976 * sin(H + 0.75049158)             # <<<<<<<<<<<<<<
@@ -3078,7 +3078,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_TAU = ((__pyx_v_H - 0.64577182) + (0.10471976 * sin((__pyx_v_H + 0.75049158))));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":120
+  /* "jb08/jb2008_subfuncs_cy.pyx":122
  *     TAU = H - 0.64577182 + 0.10471976 * sin(H + 0.75049158)
  * 
  *     GLAT = SAT_LAT             # <<<<<<<<<<<<<<
@@ -3087,7 +3087,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_GLAT = __pyx_v_SAT_LAT;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":121
+  /* "jb08/jb2008_subfuncs_cy.pyx":123
  * 
  *     GLAT = SAT_LAT
  *     ZHT  = SAT_ALT             # <<<<<<<<<<<<<<
@@ -3096,7 +3096,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_ZHT = __pyx_v_SAT_ALT;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":122
+  /* "jb08/jb2008_subfuncs_cy.pyx":124
  *     GLAT = SAT_LAT
  *     ZHT  = SAT_ALT
  *     GLST  = H + PI             # <<<<<<<<<<<<<<
@@ -3105,7 +3105,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_GLST = (__pyx_v_H + __pyx_v_PI);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":123
+  /* "jb08/jb2008_subfuncs_cy.pyx":125
  *     ZHT  = SAT_ALT
  *     GLST  = H + PI
  *     GLSTHR = (GLST/DEGRAD)*(24./360.)             # <<<<<<<<<<<<<<
@@ -3114,7 +3114,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_GLSTHR = ((__pyx_v_GLST / __pyx_v_DEGRAD) * (24. / 360.));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":124
+  /* "jb08/jb2008_subfuncs_cy.pyx":126
  *     GLST  = H + PI
  *     GLSTHR = (GLST/DEGRAD)*(24./360.)
  *     if GLSTHR >= 24: GLSTHR -= 24             # <<<<<<<<<<<<<<
@@ -3126,7 +3126,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_v_GLSTHR = (__pyx_v_GLSTHR - 24.0);
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":125
+  /* "jb08/jb2008_subfuncs_cy.pyx":127
  *     GLSTHR = (GLST/DEGRAD)*(24./360.)
  *     if GLSTHR >= 24: GLSTHR -= 24
  *     if GLSTHR < 0: GLSTHR += 24             # <<<<<<<<<<<<<<
@@ -3138,7 +3138,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_v_GLSTHR = (__pyx_v_GLSTHR + 24.0);
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":128
+  /* "jb08/jb2008_subfuncs_cy.pyx":130
  * 
  *     # Equation (17)
  *     C = cos(ETA)**2.5             # <<<<<<<<<<<<<<
@@ -3147,7 +3147,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_C = __Pyx_c_pow_double(__pyx_t_double_complex_from_parts(cos(__pyx_v_ETA), 0), __pyx_t_double_complex_from_parts(2.5, 0));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":129
+  /* "jb08/jb2008_subfuncs_cy.pyx":131
  *     # Equation (17)
  *     C = cos(ETA)**2.5
  *     S = sin(THETA)**2.5             # <<<<<<<<<<<<<<
@@ -3156,7 +3156,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_S = __Pyx_c_pow_double(__pyx_t_double_complex_from_parts(sin(__pyx_v_THETA), 0), __pyx_t_double_complex_from_parts(2.5, 0));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":131
+  /* "jb08/jb2008_subfuncs_cy.pyx":133
  *     S = sin(THETA)**2.5
  * 
  *     DF = S + (C - S) * fabs(cos(0.5 * TAU))**3             # <<<<<<<<<<<<<<
@@ -3165,7 +3165,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_DF = __Pyx_c_sum_double(__pyx_v_S, __Pyx_c_prod_double(__Pyx_c_diff_double(__pyx_v_C, __pyx_v_S), __pyx_t_double_complex_from_parts(pow(fabs(cos((0.5 * __pyx_v_TAU))), 3.0), 0)));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":132
+  /* "jb08/jb2008_subfuncs_cy.pyx":134
  * 
  *     DF = S + (C - S) * fabs(cos(0.5 * TAU))**3
  *     TSUBL = TSUBC * (1 + 0.31 * DF)             # <<<<<<<<<<<<<<
@@ -3174,27 +3174,27 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_TSUBL = __Pyx_c_prod_double(__pyx_t_double_complex_from_parts(__pyx_v_TSUBC, 0), __Pyx_c_sum_double(__pyx_t_double_complex_from_parts(1, 0), __Pyx_c_prod_double(__pyx_t_double_complex_from_parts(0.31, 0), __pyx_v_DF)));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":135
+  /* "jb08/jb2008_subfuncs_cy.pyx":137
  * 
  *     # Compute correction to dTc for local solar time and lat correction
  *     DTCLST = DTSUB_cy(F10,GLSTHR,GLAT,ZHT)             # <<<<<<<<<<<<<<
  * 
  *     # Compute the local exospheric temperature.
  */
-  __pyx_t_8 = __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(__pyx_v_F10, __pyx_v_GLSTHR, __pyx_v_GLAT, __pyx_v_ZHT); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 135, __pyx_L1_error)
+  __pyx_t_8 = __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(__pyx_v_F10, __pyx_v_GLSTHR, __pyx_v_GLAT, __pyx_v_ZHT); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 137, __pyx_L1_error)
   __pyx_v_DTCLST = __pyx_t_8;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":140
+  /* "jb08/jb2008_subfuncs_cy.pyx":142
  *     # Add geomagnetic storm effect from input dTc value
  * 
  *     TEMP[0] = TSUBL + DSTDTC             # <<<<<<<<<<<<<<
  *     TINF = TEMP[0] + DTCLST
  * 
  */
-  __pyx_t_8 = __Pyx_SoftComplexToDouble(__Pyx_c_sum_double(__pyx_v_TSUBL, __pyx_t_double_complex_from_parts(__pyx_v_DSTDTC, 0)), 1); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 140, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_SoftComplexToDouble(__Pyx_c_sum_double(__pyx_v_TSUBL, __pyx_t_double_complex_from_parts(__pyx_v_DSTDTC, 0)), 1); if (unlikely(__pyx_t_8 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 142, __pyx_L1_error)
   (__pyx_v_TEMP[0]) = __pyx_t_8;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":141
+  /* "jb08/jb2008_subfuncs_cy.pyx":143
  * 
  *     TEMP[0] = TSUBL + DSTDTC
  *     TINF = TEMP[0] + DTCLST             # <<<<<<<<<<<<<<
@@ -3203,7 +3203,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_TINF = ((__pyx_v_TEMP[0]) + __pyx_v_DTCLST);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":144
+  /* "jb08/jb2008_subfuncs_cy.pyx":146
  * 
  *     # Equation (9)
  *     TSUBX = 444.3807 + 0.02385 * TINF - 392.8292 * exp(-0.0021357 * TINF)             # <<<<<<<<<<<<<<
@@ -3212,7 +3212,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_TSUBX = ((444.3807 + (0.02385 * __pyx_v_TINF)) - (392.8292 * exp((-0.0021357 * __pyx_v_TINF))));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":147
+  /* "jb08/jb2008_subfuncs_cy.pyx":149
  * 
  *     # Equation (11)
  *     GSUBX = 0.054285714 * (TSUBX - 183)             # <<<<<<<<<<<<<<
@@ -3221,7 +3221,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_GSUBX = (0.054285714 * (__pyx_v_TSUBX - 183.0));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":151
+  /* "jb08/jb2008_subfuncs_cy.pyx":153
  *     # The TC array will be an argument in the call to XLOCAL,
  *     # which evaluates Equation (10) or Equation (13)
  *     cdef double[4] TC = [0.,0.,0.,0.]             # <<<<<<<<<<<<<<
@@ -3234,7 +3234,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_9[3] = 0.;
   memcpy(&(__pyx_v_TC[0]), __pyx_t_9, sizeof(__pyx_v_TC[0]) * (4));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":152
+  /* "jb08/jb2008_subfuncs_cy.pyx":154
  *     # which evaluates Equation (10) or Equation (13)
  *     cdef double[4] TC = [0.,0.,0.,0.]
  *     TC[0],TC[1] = TSUBX,GSUBX             # <<<<<<<<<<<<<<
@@ -3246,7 +3246,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   (__pyx_v_TC[0]) = __pyx_t_8;
   (__pyx_v_TC[1]) = __pyx_t_10;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":155
+  /* "jb08/jb2008_subfuncs_cy.pyx":157
  * 
  *     # A AND GSUBX/A OF Equation (13)
  *     TC[2] = (TINF - TSUBX)/PIOV2             # <<<<<<<<<<<<<<
@@ -3255,7 +3255,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_TC[2]) = ((__pyx_v_TINF - __pyx_v_TSUBX) / __pyx_v_PIOV2);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":156
+  /* "jb08/jb2008_subfuncs_cy.pyx":158
  *     # A AND GSUBX/A OF Equation (13)
  *     TC[2] = (TINF - TSUBX)/PIOV2
  *     TC[3] = GSUBX/TC[2]             # <<<<<<<<<<<<<<
@@ -3264,7 +3264,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_TC[3]) = (__pyx_v_GSUBX / (__pyx_v_TC[2]));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":159
+  /* "jb08/jb2008_subfuncs_cy.pyx":161
  * 
  *     # Equation (5)
  *     cdef double Z1 = 90             # <<<<<<<<<<<<<<
@@ -3273,7 +3273,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_Z1 = 90.0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":160
+  /* "jb08/jb2008_subfuncs_cy.pyx":162
  *     # Equation (5)
  *     cdef double Z1 = 90
  *     Z2 = min(SAT_ALT,105.)             # <<<<<<<<<<<<<<
@@ -3290,7 +3290,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   }
   __pyx_v_Z2 = __pyx_t_11;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":161
+  /* "jb08/jb2008_subfuncs_cy.pyx":163
  *     cdef double Z1 = 90
  *     Z2 = min(SAT_ALT,105.)
  *     AL = log(Z2/Z1)             # <<<<<<<<<<<<<<
@@ -3299,23 +3299,23 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_AL = log((__pyx_v_Z2 / __pyx_v_Z1));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":162
+  /* "jb08/jb2008_subfuncs_cy.pyx":164
  *     Z2 = min(SAT_ALT,105.)
  *     AL = log(Z2/Z1)
  *     cdef int N = int(AL/R1) + 1             # <<<<<<<<<<<<<<
  *     ZR = exp(AL/N)
  *     AMBAR1 = XAMBAR_cy(Z1)
  */
-  __pyx_t_12 = __Pyx_PyInt_FromDouble((__pyx_v_AL / __pyx_v_R1)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_12 = __Pyx_PyInt_FromDouble((__pyx_v_AL / __pyx_v_R1)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_12, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_12, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
   __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-  __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_t_13); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 162, __pyx_L1_error)
+  __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_t_13); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 164, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
   __pyx_v_N = __pyx_t_14;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":163
+  /* "jb08/jb2008_subfuncs_cy.pyx":165
  *     AL = log(Z2/Z1)
  *     cdef int N = int(AL/R1) + 1
  *     ZR = exp(AL/N)             # <<<<<<<<<<<<<<
@@ -3324,27 +3324,27 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_ZR = exp((__pyx_v_AL / ((double)__pyx_v_N)));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":164
+  /* "jb08/jb2008_subfuncs_cy.pyx":166
  *     cdef int N = int(AL/R1) + 1
  *     ZR = exp(AL/N)
  *     AMBAR1 = XAMBAR_cy(Z1)             # <<<<<<<<<<<<<<
  *     TLOC1 = XLOCAL_cy(Z1,TC)
  *     ZEND = Z1
  */
-  __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(__pyx_v_Z1); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 164, __pyx_L1_error)
+  __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(__pyx_v_Z1); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 166, __pyx_L1_error)
   __pyx_v_AMBAR1 = __pyx_t_11;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":165
+  /* "jb08/jb2008_subfuncs_cy.pyx":167
  *     ZR = exp(AL/N)
  *     AMBAR1 = XAMBAR_cy(Z1)
  *     TLOC1 = XLOCAL_cy(Z1,TC)             # <<<<<<<<<<<<<<
  *     ZEND = Z1
  *     cdef double SUM2 = 0.
  */
-  __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z1, __pyx_v_TC); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 165, __pyx_L1_error)
+  __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z1, __pyx_v_TC); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 167, __pyx_L1_error)
   __pyx_v_TLOC1 = __pyx_t_11;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":166
+  /* "jb08/jb2008_subfuncs_cy.pyx":168
  *     AMBAR1 = XAMBAR_cy(Z1)
  *     TLOC1 = XLOCAL_cy(Z1,TC)
  *     ZEND = Z1             # <<<<<<<<<<<<<<
@@ -3353,7 +3353,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_ZEND = __pyx_v_Z1;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":167
+  /* "jb08/jb2008_subfuncs_cy.pyx":169
  *     TLOC1 = XLOCAL_cy(Z1,TC)
  *     ZEND = Z1
  *     cdef double SUM2 = 0.             # <<<<<<<<<<<<<<
@@ -3362,17 +3362,17 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_SUM2 = 0.;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":168
+  /* "jb08/jb2008_subfuncs_cy.pyx":170
  *     ZEND = Z1
  *     cdef double SUM2 = 0.
  *     AIN = AMBAR1 * XGRAV_cy(Z1)/TLOC1             # <<<<<<<<<<<<<<
  * 
  *     for I in range(N):
  */
-  __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z1); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 168, __pyx_L1_error)
+  __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z1); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 170, __pyx_L1_error)
   __pyx_v_AIN = ((__pyx_v_AMBAR1 * __pyx_t_11) / __pyx_v_TLOC1);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":170
+  /* "jb08/jb2008_subfuncs_cy.pyx":172
  *     AIN = AMBAR1 * XGRAV_cy(Z1)/TLOC1
  * 
  *     for I in range(N):             # <<<<<<<<<<<<<<
@@ -3384,7 +3384,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
     __pyx_v_I = __pyx_t_16;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":171
+    /* "jb08/jb2008_subfuncs_cy.pyx":173
  * 
  *     for I in range(N):
  *         Z = ZEND             # <<<<<<<<<<<<<<
@@ -3393,7 +3393,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_Z = __pyx_v_ZEND;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":172
+    /* "jb08/jb2008_subfuncs_cy.pyx":174
  *     for I in range(N):
  *         Z = ZEND
  *         ZEND = ZR * Z             # <<<<<<<<<<<<<<
@@ -3402,7 +3402,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_ZEND = (__pyx_v_ZR * __pyx_v_Z);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":173
+    /* "jb08/jb2008_subfuncs_cy.pyx":175
  *         Z = ZEND
  *         ZEND = ZR * Z
  *         DZ = 0.25 * (ZEND-Z)             # <<<<<<<<<<<<<<
@@ -3411,7 +3411,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_DZ = (0.25 * (__pyx_v_ZEND - __pyx_v_Z));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":174
+    /* "jb08/jb2008_subfuncs_cy.pyx":176
  *         ZEND = ZR * Z
  *         DZ = 0.25 * (ZEND-Z)
  *         SUM1 = WT[0]*AIN             # <<<<<<<<<<<<<<
@@ -3420,7 +3420,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_SUM1 = ((__pyx_v_WT[0]) * __pyx_v_AIN);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":176
+    /* "jb08/jb2008_subfuncs_cy.pyx":178
  *         SUM1 = WT[0]*AIN
  * 
  *         for J in range(1,5):             # <<<<<<<<<<<<<<
@@ -3430,7 +3430,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     for (__pyx_t_17 = 1; __pyx_t_17 < 5; __pyx_t_17+=1) {
       __pyx_v_J = __pyx_t_17;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":177
+      /* "jb08/jb2008_subfuncs_cy.pyx":179
  * 
  *         for J in range(1,5):
  *             Z = Z + DZ             # <<<<<<<<<<<<<<
@@ -3439,37 +3439,37 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_Z = (__pyx_v_Z + __pyx_v_DZ);
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":178
+      /* "jb08/jb2008_subfuncs_cy.pyx":180
  *         for J in range(1,5):
  *             Z = Z + DZ
  *             AMBAR2 = XAMBAR_cy(Z)             # <<<<<<<<<<<<<<
  *             TLOC2 = XLOCAL_cy(Z,TC)
  *             GRAVL = XGRAV_cy(Z)
  */
-      __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(__pyx_v_Z); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 178, __pyx_L1_error)
+      __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(__pyx_v_Z); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L1_error)
       __pyx_v_AMBAR2 = __pyx_t_11;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":179
+      /* "jb08/jb2008_subfuncs_cy.pyx":181
  *             Z = Z + DZ
  *             AMBAR2 = XAMBAR_cy(Z)
  *             TLOC2 = XLOCAL_cy(Z,TC)             # <<<<<<<<<<<<<<
  *             GRAVL = XGRAV_cy(Z)
  *             AIN = AMBAR2 * GRAVL/TLOC2
  */
-      __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z, __pyx_v_TC); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 179, __pyx_L1_error)
+      __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z, __pyx_v_TC); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 181, __pyx_L1_error)
       __pyx_v_TLOC2 = __pyx_t_11;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":180
+      /* "jb08/jb2008_subfuncs_cy.pyx":182
  *             AMBAR2 = XAMBAR_cy(Z)
  *             TLOC2 = XLOCAL_cy(Z,TC)
  *             GRAVL = XGRAV_cy(Z)             # <<<<<<<<<<<<<<
  *             AIN = AMBAR2 * GRAVL/TLOC2
  *             SUM1 = SUM1 + WT[J] * AIN
  */
-      __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 180, __pyx_L1_error)
+      __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 182, __pyx_L1_error)
       __pyx_v_GRAVL = __pyx_t_11;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":181
+      /* "jb08/jb2008_subfuncs_cy.pyx":183
  *             TLOC2 = XLOCAL_cy(Z,TC)
  *             GRAVL = XGRAV_cy(Z)
  *             AIN = AMBAR2 * GRAVL/TLOC2             # <<<<<<<<<<<<<<
@@ -3478,7 +3478,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_AIN = ((__pyx_v_AMBAR2 * __pyx_v_GRAVL) / __pyx_v_TLOC2);
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":182
+      /* "jb08/jb2008_subfuncs_cy.pyx":184
  *             GRAVL = XGRAV_cy(Z)
  *             AIN = AMBAR2 * GRAVL/TLOC2
  *             SUM1 = SUM1 + WT[J] * AIN             # <<<<<<<<<<<<<<
@@ -3488,7 +3488,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       __pyx_v_SUM1 = (__pyx_v_SUM1 + ((__pyx_v_WT[__pyx_v_J]) * __pyx_v_AIN));
     }
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":183
+    /* "jb08/jb2008_subfuncs_cy.pyx":185
  *             AIN = AMBAR2 * GRAVL/TLOC2
  *             SUM1 = SUM1 + WT[J] * AIN
  *         SUM2 = SUM2 + DZ * SUM1             # <<<<<<<<<<<<<<
@@ -3498,7 +3498,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_v_SUM2 = (__pyx_v_SUM2 + (__pyx_v_DZ * __pyx_v_SUM1));
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":185
+  /* "jb08/jb2008_subfuncs_cy.pyx":187
  *         SUM2 = SUM2 + DZ * SUM1
  * 
  *     cdef double FACT1 = 1.e3/RSTAR             # <<<<<<<<<<<<<<
@@ -3507,7 +3507,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_FACT1 = (1.e3 / __pyx_v_RSTAR);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":186
+  /* "jb08/jb2008_subfuncs_cy.pyx":188
  * 
  *     cdef double FACT1 = 1.e3/RSTAR
  *     cdef double RHO = 3.46e-6 * AMBAR2 * TLOC1 * exp(-FACT1*SUM2) / (AMBAR1 * TLOC2)             # <<<<<<<<<<<<<<
@@ -3516,7 +3516,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_RHO = ((((3.46e-6 * __pyx_v_AMBAR2) * __pyx_v_TLOC1) * exp(((-__pyx_v_FACT1) * __pyx_v_SUM2))) / (__pyx_v_AMBAR1 * __pyx_v_TLOC2));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":189
+  /* "jb08/jb2008_subfuncs_cy.pyx":191
  * 
  *     # Equation (2)
  *     cdef double ANM = AVOGAD * RHO             # <<<<<<<<<<<<<<
@@ -3525,7 +3525,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_ANM = (__pyx_v_AVOGAD * __pyx_v_RHO);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":190
+  /* "jb08/jb2008_subfuncs_cy.pyx":192
  *     # Equation (2)
  *     cdef double ANM = AVOGAD * RHO
  *     cdef double AN = ANM/AMBAR2             # <<<<<<<<<<<<<<
@@ -3534,7 +3534,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_AN = (__pyx_v_ANM / __pyx_v_AMBAR2);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":193
+  /* "jb08/jb2008_subfuncs_cy.pyx":195
  * 
  *     # Equation (3)
  *     cdef double FACT2  = ANM/28.960             # <<<<<<<<<<<<<<
@@ -3543,7 +3543,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_FACT2 = (__pyx_v_ANM / 28.960);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":194
+  /* "jb08/jb2008_subfuncs_cy.pyx":196
  *     # Equation (3)
  *     cdef double FACT2  = ANM/28.960
  *     cdef double[6] ALN = [0.,0.,0.,0.,0.,0.]             # <<<<<<<<<<<<<<
@@ -3558,7 +3558,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_18[5] = 0.;
   memcpy(&(__pyx_v_ALN[0]), __pyx_t_18, sizeof(__pyx_v_ALN[0]) * (6));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":195
+  /* "jb08/jb2008_subfuncs_cy.pyx":197
  *     cdef double FACT2  = ANM/28.960
  *     cdef double[6] ALN = [0.,0.,0.,0.,0.,0.]
  *     ALN[0] = log(FRAC[0]*FACT2)             # <<<<<<<<<<<<<<
@@ -3567,7 +3567,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_ALN[0]) = log(((__pyx_v_FRAC[0]) * __pyx_v_FACT2));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":196
+  /* "jb08/jb2008_subfuncs_cy.pyx":198
  *     cdef double[6] ALN = [0.,0.,0.,0.,0.,0.]
  *     ALN[0] = log(FRAC[0]*FACT2)
  *     ALN[3] = log(FRAC[2]*FACT2)             # <<<<<<<<<<<<<<
@@ -3576,7 +3576,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_ALN[3]) = log(((__pyx_v_FRAC[2]) * __pyx_v_FACT2));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":197
+  /* "jb08/jb2008_subfuncs_cy.pyx":199
  *     ALN[0] = log(FRAC[0]*FACT2)
  *     ALN[3] = log(FRAC[2]*FACT2)
  *     ALN[4] = log(FRAC[3]*FACT2)             # <<<<<<<<<<<<<<
@@ -3585,7 +3585,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_ALN[4]) = log(((__pyx_v_FRAC[3]) * __pyx_v_FACT2));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":200
+  /* "jb08/jb2008_subfuncs_cy.pyx":202
  * 
  *     # Equation (4)
  *     ALN[1] = log(FACT2 * (1 + FRAC[1]) - AN)             # <<<<<<<<<<<<<<
@@ -3594,7 +3594,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_ALN[1]) = log(((__pyx_v_FACT2 * (1.0 + (__pyx_v_FRAC[1]))) - __pyx_v_AN));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":201
+  /* "jb08/jb2008_subfuncs_cy.pyx":203
  *     # Equation (4)
  *     ALN[1] = log(FACT2 * (1 + FRAC[1]) - AN)
  *     ALN[2] = log(2 * (AN - FACT2))             # <<<<<<<<<<<<<<
@@ -3603,7 +3603,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   (__pyx_v_ALN[2]) = log((2.0 * (__pyx_v_AN - __pyx_v_FACT2)));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":203
+  /* "jb08/jb2008_subfuncs_cy.pyx":205
  *     ALN[2] = log(2 * (AN - FACT2))
  * 
  *     if SAT_ALT <= 105:             # <<<<<<<<<<<<<<
@@ -3613,7 +3613,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_7 = (__pyx_v_SAT_ALT <= 105.0);
   if (__pyx_t_7) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":204
+    /* "jb08/jb2008_subfuncs_cy.pyx":206
  * 
  *     if SAT_ALT <= 105:
  *         TEMP[1] = TLOC2             # <<<<<<<<<<<<<<
@@ -3622,7 +3622,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     (__pyx_v_TEMP[1]) = __pyx_v_TLOC2;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":206
+    /* "jb08/jb2008_subfuncs_cy.pyx":208
  *         TEMP[1] = TLOC2
  *         # Put in negligible hydrogen for use in DO-LOOP 13
  *         ALN[5] = ALN[4] - 25             # <<<<<<<<<<<<<<
@@ -3631,7 +3631,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     (__pyx_v_ALN[5]) = ((__pyx_v_ALN[4]) - 25.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":203
+    /* "jb08/jb2008_subfuncs_cy.pyx":205
  *     ALN[2] = log(2 * (AN - FACT2))
  * 
  *     if SAT_ALT <= 105:             # <<<<<<<<<<<<<<
@@ -3641,7 +3641,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     goto __pyx_L10;
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":209
+  /* "jb08/jb2008_subfuncs_cy.pyx":211
  *     else:
  *         # Equation (6)
  *         Z3 = min(SAT_ALT,500)             # <<<<<<<<<<<<<<
@@ -3659,7 +3659,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     }
     __pyx_v_Z3 = __pyx_t_10;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":210
+    /* "jb08/jb2008_subfuncs_cy.pyx":212
  *         # Equation (6)
  *         Z3 = min(SAT_ALT,500)
  *         AL = log(Z3/Z)             # <<<<<<<<<<<<<<
@@ -3668,23 +3668,23 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_AL = log((__pyx_v_Z3 / __pyx_v_Z));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":211
+    /* "jb08/jb2008_subfuncs_cy.pyx":213
  *         Z3 = min(SAT_ALT,500)
  *         AL = log(Z3/Z)
  *         N = int(AL/R2) + 1             # <<<<<<<<<<<<<<
  *         ZR = exp(AL/N)
  *         SUM2 = 0.
  */
-    __pyx_t_13 = __Pyx_PyInt_FromDouble((__pyx_v_AL / __pyx_v_R2)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 211, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyInt_FromDouble((__pyx_v_AL / __pyx_v_R2)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_12 = __Pyx_PyInt_AddObjC(__pyx_t_13, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 211, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyInt_AddObjC(__pyx_t_13, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_t_12); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 211, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_t_12); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 213, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __pyx_v_N = __pyx_t_14;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":212
+    /* "jb08/jb2008_subfuncs_cy.pyx":214
  *         AL = log(Z3/Z)
  *         N = int(AL/R2) + 1
  *         ZR = exp(AL/N)             # <<<<<<<<<<<<<<
@@ -3693,7 +3693,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_ZR = exp((__pyx_v_AL / ((double)__pyx_v_N)));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":213
+    /* "jb08/jb2008_subfuncs_cy.pyx":215
  *         N = int(AL/R2) + 1
  *         ZR = exp(AL/N)
  *         SUM2 = 0.             # <<<<<<<<<<<<<<
@@ -3702,7 +3702,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_SUM2 = 0.;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":214
+    /* "jb08/jb2008_subfuncs_cy.pyx":216
  *         ZR = exp(AL/N)
  *         SUM2 = 0.
  *         AIN = GRAVL/TLOC2             # <<<<<<<<<<<<<<
@@ -3711,7 +3711,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_AIN = (__pyx_v_GRAVL / __pyx_v_TLOC2);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":216
+    /* "jb08/jb2008_subfuncs_cy.pyx":218
  *         AIN = GRAVL/TLOC2
  * 
  *         for I in range(N):             # <<<<<<<<<<<<<<
@@ -3723,7 +3723,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
       __pyx_v_I = __pyx_t_16;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":217
+      /* "jb08/jb2008_subfuncs_cy.pyx":219
  * 
  *         for I in range(N):
  *             Z = ZEND             # <<<<<<<<<<<<<<
@@ -3732,7 +3732,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_Z = __pyx_v_ZEND;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":218
+      /* "jb08/jb2008_subfuncs_cy.pyx":220
  *         for I in range(N):
  *             Z = ZEND
  *             ZEND = ZR * Z             # <<<<<<<<<<<<<<
@@ -3741,7 +3741,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_ZEND = (__pyx_v_ZR * __pyx_v_Z);
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":219
+      /* "jb08/jb2008_subfuncs_cy.pyx":221
  *             Z = ZEND
  *             ZEND = ZR * Z
  *             DZ = 0.25 * (ZEND - Z)             # <<<<<<<<<<<<<<
@@ -3750,7 +3750,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_DZ = (0.25 * (__pyx_v_ZEND - __pyx_v_Z));
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":220
+      /* "jb08/jb2008_subfuncs_cy.pyx":222
  *             ZEND = ZR * Z
  *             DZ = 0.25 * (ZEND - Z)
  *             SUM1 = WT[0] * AIN             # <<<<<<<<<<<<<<
@@ -3759,7 +3759,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_SUM1 = ((__pyx_v_WT[0]) * __pyx_v_AIN);
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":221
+      /* "jb08/jb2008_subfuncs_cy.pyx":223
  *             DZ = 0.25 * (ZEND - Z)
  *             SUM1 = WT[0] * AIN
  *             for J in range(1,5):             # <<<<<<<<<<<<<<
@@ -3769,7 +3769,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       for (__pyx_t_17 = 1; __pyx_t_17 < 5; __pyx_t_17+=1) {
         __pyx_v_J = __pyx_t_17;
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":222
+        /* "jb08/jb2008_subfuncs_cy.pyx":224
  *             SUM1 = WT[0] * AIN
  *             for J in range(1,5):
  *                 Z += DZ             # <<<<<<<<<<<<<<
@@ -3778,27 +3778,27 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
         __pyx_v_Z = (__pyx_v_Z + __pyx_v_DZ);
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":223
+        /* "jb08/jb2008_subfuncs_cy.pyx":225
  *             for J in range(1,5):
  *                 Z += DZ
  *                 TLOC3 = XLOCAL_cy(Z,TC)             # <<<<<<<<<<<<<<
  *                 GRAVL = XGRAV_cy(Z)
  *                 AIN = GRAVL/TLOC3
  */
-        __pyx_t_10 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z, __pyx_v_TC); if (unlikely(__pyx_t_10 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 223, __pyx_L1_error)
+        __pyx_t_10 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z, __pyx_v_TC); if (unlikely(__pyx_t_10 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 225, __pyx_L1_error)
         __pyx_v_TLOC3 = __pyx_t_10;
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":224
+        /* "jb08/jb2008_subfuncs_cy.pyx":226
  *                 Z += DZ
  *                 TLOC3 = XLOCAL_cy(Z,TC)
  *                 GRAVL = XGRAV_cy(Z)             # <<<<<<<<<<<<<<
  *                 AIN = GRAVL/TLOC3
  *                 SUM1 += WT[J] * AIN
  */
-        __pyx_t_10 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z); if (unlikely(__pyx_t_10 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 224, __pyx_L1_error)
+        __pyx_t_10 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z); if (unlikely(__pyx_t_10 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 226, __pyx_L1_error)
         __pyx_v_GRAVL = __pyx_t_10;
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":225
+        /* "jb08/jb2008_subfuncs_cy.pyx":227
  *                 TLOC3 = XLOCAL_cy(Z,TC)
  *                 GRAVL = XGRAV_cy(Z)
  *                 AIN = GRAVL/TLOC3             # <<<<<<<<<<<<<<
@@ -3807,7 +3807,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
         __pyx_v_AIN = (__pyx_v_GRAVL / __pyx_v_TLOC3);
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":226
+        /* "jb08/jb2008_subfuncs_cy.pyx":228
  *                 GRAVL = XGRAV_cy(Z)
  *                 AIN = GRAVL/TLOC3
  *                 SUM1 += WT[J] * AIN             # <<<<<<<<<<<<<<
@@ -3817,7 +3817,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
         __pyx_v_SUM1 = (__pyx_v_SUM1 + ((__pyx_v_WT[__pyx_v_J]) * __pyx_v_AIN));
       }
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":227
+      /* "jb08/jb2008_subfuncs_cy.pyx":229
  *                 AIN = GRAVL/TLOC3
  *                 SUM1 += WT[J] * AIN
  *             SUM2 += DZ * SUM1             # <<<<<<<<<<<<<<
@@ -3827,7 +3827,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       __pyx_v_SUM2 = (__pyx_v_SUM2 + (__pyx_v_DZ * __pyx_v_SUM1));
     }
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":229
+    /* "jb08/jb2008_subfuncs_cy.pyx":231
  *             SUM2 += DZ * SUM1
  * 
  *         Z4 = max(SAT_ALT,500)             # <<<<<<<<<<<<<<
@@ -3844,7 +3844,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     }
     __pyx_v_Z4 = __pyx_t_11;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":230
+    /* "jb08/jb2008_subfuncs_cy.pyx":232
  * 
  *         Z4 = max(SAT_ALT,500)
  *         AL = log(Z4/Z)             # <<<<<<<<<<<<<<
@@ -3853,7 +3853,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_AL = log((__pyx_v_Z4 / __pyx_v_Z));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":231
+    /* "jb08/jb2008_subfuncs_cy.pyx":233
  *         Z4 = max(SAT_ALT,500)
  *         AL = log(Z4/Z)
  *         R = R2             # <<<<<<<<<<<<<<
@@ -3862,7 +3862,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_R = __pyx_v_R2;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":232
+    /* "jb08/jb2008_subfuncs_cy.pyx":234
  *         AL = log(Z4/Z)
  *         R = R2
  *         if SAT_ALT > 500: R = R3             # <<<<<<<<<<<<<<
@@ -3874,23 +3874,23 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       __pyx_v_R = __pyx_v_R3;
     }
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":233
+    /* "jb08/jb2008_subfuncs_cy.pyx":235
  *         R = R2
  *         if SAT_ALT > 500: R = R3
  *         N = int(AL/R) + 1             # <<<<<<<<<<<<<<
  *         ZR = exp(AL/N)
  *         SUM3 = 0.
  */
-    __pyx_t_12 = __Pyx_PyInt_FromDouble((__pyx_v_AL / __pyx_v_R)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 233, __pyx_L1_error)
+    __pyx_t_12 = __Pyx_PyInt_FromDouble((__pyx_v_AL / __pyx_v_R)); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 235, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_12, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 233, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyInt_AddObjC(__pyx_t_12, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 235, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-    __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_t_13); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 233, __pyx_L1_error)
+    __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_t_13); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 235, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __pyx_v_N = __pyx_t_14;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":234
+    /* "jb08/jb2008_subfuncs_cy.pyx":236
  *         if SAT_ALT > 500: R = R3
  *         N = int(AL/R) + 1
  *         ZR = exp(AL/N)             # <<<<<<<<<<<<<<
@@ -3899,7 +3899,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_ZR = exp((__pyx_v_AL / ((double)__pyx_v_N)));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":235
+    /* "jb08/jb2008_subfuncs_cy.pyx":237
  *         N = int(AL/R) + 1
  *         ZR = exp(AL/N)
  *         SUM3 = 0.             # <<<<<<<<<<<<<<
@@ -3908,7 +3908,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_SUM3 = 0.;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":236
+    /* "jb08/jb2008_subfuncs_cy.pyx":238
  *         ZR = exp(AL/N)
  *         SUM3 = 0.
  *         for I in range(N):             # <<<<<<<<<<<<<<
@@ -3920,7 +3920,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     for (__pyx_t_16 = 0; __pyx_t_16 < __pyx_t_15; __pyx_t_16+=1) {
       __pyx_v_I = __pyx_t_16;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":237
+      /* "jb08/jb2008_subfuncs_cy.pyx":239
  *         SUM3 = 0.
  *         for I in range(N):
  *             Z = ZEND             # <<<<<<<<<<<<<<
@@ -3929,7 +3929,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_Z = __pyx_v_ZEND;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":238
+      /* "jb08/jb2008_subfuncs_cy.pyx":240
  *         for I in range(N):
  *             Z = ZEND
  *             ZEND = ZR * Z             # <<<<<<<<<<<<<<
@@ -3938,7 +3938,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_ZEND = (__pyx_v_ZR * __pyx_v_Z);
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":239
+      /* "jb08/jb2008_subfuncs_cy.pyx":241
  *             Z = ZEND
  *             ZEND = ZR * Z
  *             DZ = 0.25 * (ZEND - Z)             # <<<<<<<<<<<<<<
@@ -3947,7 +3947,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_DZ = (0.25 * (__pyx_v_ZEND - __pyx_v_Z));
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":240
+      /* "jb08/jb2008_subfuncs_cy.pyx":242
  *             ZEND = ZR * Z
  *             DZ = 0.25 * (ZEND - Z)
  *             SUM1 = WT[0] * AIN             # <<<<<<<<<<<<<<
@@ -3956,7 +3956,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_SUM1 = ((__pyx_v_WT[0]) * __pyx_v_AIN);
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":241
+      /* "jb08/jb2008_subfuncs_cy.pyx":243
  *             DZ = 0.25 * (ZEND - Z)
  *             SUM1 = WT[0] * AIN
  *             for J in range(1,5):             # <<<<<<<<<<<<<<
@@ -3966,7 +3966,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       for (__pyx_t_17 = 1; __pyx_t_17 < 5; __pyx_t_17+=1) {
         __pyx_v_J = __pyx_t_17;
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":242
+        /* "jb08/jb2008_subfuncs_cy.pyx":244
  *             SUM1 = WT[0] * AIN
  *             for J in range(1,5):
  *                 Z += DZ             # <<<<<<<<<<<<<<
@@ -3975,27 +3975,27 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
         __pyx_v_Z = (__pyx_v_Z + __pyx_v_DZ);
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":243
+        /* "jb08/jb2008_subfuncs_cy.pyx":245
  *             for J in range(1,5):
  *                 Z += DZ
  *                 TLOC4 = XLOCAL_cy(Z,TC)             # <<<<<<<<<<<<<<
  *                 GRAVL = XGRAV_cy(Z)
  *                 AIN = GRAVL/TLOC4
  */
-        __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z, __pyx_v_TC); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 243, __pyx_L1_error)
+        __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(__pyx_v_Z, __pyx_v_TC); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 245, __pyx_L1_error)
         __pyx_v_TLOC4 = __pyx_t_11;
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":244
+        /* "jb08/jb2008_subfuncs_cy.pyx":246
  *                 Z += DZ
  *                 TLOC4 = XLOCAL_cy(Z,TC)
  *                 GRAVL = XGRAV_cy(Z)             # <<<<<<<<<<<<<<
  *                 AIN = GRAVL/TLOC4
  *                 SUM1 += WT[J] * AIN
  */
-        __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 244, __pyx_L1_error)
+        __pyx_t_11 = __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(__pyx_v_Z); if (unlikely(__pyx_t_11 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 246, __pyx_L1_error)
         __pyx_v_GRAVL = __pyx_t_11;
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":245
+        /* "jb08/jb2008_subfuncs_cy.pyx":247
  *                 TLOC4 = XLOCAL_cy(Z,TC)
  *                 GRAVL = XGRAV_cy(Z)
  *                 AIN = GRAVL/TLOC4             # <<<<<<<<<<<<<<
@@ -4004,7 +4004,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
         __pyx_v_AIN = (__pyx_v_GRAVL / __pyx_v_TLOC4);
 
-        /* "jb08/jb2008_subfuncs_cy.pyx":246
+        /* "jb08/jb2008_subfuncs_cy.pyx":248
  *                 GRAVL = XGRAV_cy(Z)
  *                 AIN = GRAVL/TLOC4
  *                 SUM1 += WT[J] * AIN             # <<<<<<<<<<<<<<
@@ -4014,7 +4014,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
         __pyx_v_SUM1 = (__pyx_v_SUM1 + ((__pyx_v_WT[__pyx_v_J]) * __pyx_v_AIN));
       }
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":247
+      /* "jb08/jb2008_subfuncs_cy.pyx":249
  *                 AIN = GRAVL/TLOC4
  *                 SUM1 += WT[J] * AIN
  *             SUM3 += DZ * SUM1             # <<<<<<<<<<<<<<
@@ -4024,7 +4024,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       __pyx_v_SUM3 = (__pyx_v_SUM3 + (__pyx_v_DZ * __pyx_v_SUM1));
     }
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":249
+    /* "jb08/jb2008_subfuncs_cy.pyx":251
  *             SUM3 += DZ * SUM1
  * 
  *         if SAT_ALT <= 500:             # <<<<<<<<<<<<<<
@@ -4034,7 +4034,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_t_7 = (__pyx_v_SAT_ALT <= 500.0);
     if (__pyx_t_7) {
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":250
+      /* "jb08/jb2008_subfuncs_cy.pyx":252
  * 
  *         if SAT_ALT <= 500:
  *             T500 = TLOC4             # <<<<<<<<<<<<<<
@@ -4043,7 +4043,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_T500 = __pyx_v_TLOC4;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":251
+      /* "jb08/jb2008_subfuncs_cy.pyx":253
  *         if SAT_ALT <= 500:
  *             T500 = TLOC4
  *             TEMP[1] = TLOC3             # <<<<<<<<<<<<<<
@@ -4052,7 +4052,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       (__pyx_v_TEMP[1]) = __pyx_v_TLOC3;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":252
+      /* "jb08/jb2008_subfuncs_cy.pyx":254
  *             T500 = TLOC4
  *             TEMP[1] = TLOC3
  *             ALTR = log(TLOC3/TLOC2)             # <<<<<<<<<<<<<<
@@ -4061,7 +4061,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_ALTR = log((__pyx_v_TLOC3 / __pyx_v_TLOC2));
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":253
+      /* "jb08/jb2008_subfuncs_cy.pyx":255
  *             TEMP[1] = TLOC3
  *             ALTR = log(TLOC3/TLOC2)
  *             FACT2 = FACT1 * SUM2             # <<<<<<<<<<<<<<
@@ -4070,7 +4070,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_FACT2 = (__pyx_v_FACT1 * __pyx_v_SUM2);
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":254
+      /* "jb08/jb2008_subfuncs_cy.pyx":256
  *             ALTR = log(TLOC3/TLOC2)
  *             FACT2 = FACT1 * SUM2
  *             HSIGN = 1.             # <<<<<<<<<<<<<<
@@ -4079,7 +4079,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_HSIGN = 1.;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":249
+      /* "jb08/jb2008_subfuncs_cy.pyx":251
  *             SUM3 += DZ * SUM1
  * 
  *         if SAT_ALT <= 500:             # <<<<<<<<<<<<<<
@@ -4089,7 +4089,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       goto __pyx_L20;
     }
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":256
+    /* "jb08/jb2008_subfuncs_cy.pyx":258
  *             HSIGN = 1.
  *         else:
  *             T500 = TLOC3             # <<<<<<<<<<<<<<
@@ -4099,7 +4099,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     /*else*/ {
       __pyx_v_T500 = __pyx_v_TLOC3;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":257
+      /* "jb08/jb2008_subfuncs_cy.pyx":259
  *         else:
  *             T500 = TLOC3
  *             TEMP[1] = TLOC4             # <<<<<<<<<<<<<<
@@ -4108,7 +4108,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       (__pyx_v_TEMP[1]) = __pyx_v_TLOC4;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":258
+      /* "jb08/jb2008_subfuncs_cy.pyx":260
  *             T500 = TLOC3
  *             TEMP[1] = TLOC4
  *             ALTR = log(TLOC4/TLOC2)             # <<<<<<<<<<<<<<
@@ -4117,7 +4117,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_ALTR = log((__pyx_v_TLOC4 / __pyx_v_TLOC2));
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":259
+      /* "jb08/jb2008_subfuncs_cy.pyx":261
  *             TEMP[1] = TLOC4
  *             ALTR = log(TLOC4/TLOC2)
  *             FACT2 = FACT1 * (SUM2 + SUM3)             # <<<<<<<<<<<<<<
@@ -4126,7 +4126,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
       __pyx_v_FACT2 = (__pyx_v_FACT1 * (__pyx_v_SUM2 + __pyx_v_SUM3));
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":260
+      /* "jb08/jb2008_subfuncs_cy.pyx":262
  *             ALTR = log(TLOC4/TLOC2)
  *             FACT2 = FACT1 * (SUM2 + SUM3)
  *             HSIGN = -1.             # <<<<<<<<<<<<<<
@@ -4137,7 +4137,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     }
     __pyx_L20:;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":262
+    /* "jb08/jb2008_subfuncs_cy.pyx":264
  *             HSIGN = -1.
  * 
  *         for I in range(5):             # <<<<<<<<<<<<<<
@@ -4147,7 +4147,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     for (__pyx_t_16 = 0; __pyx_t_16 < 5; __pyx_t_16+=1) {
       __pyx_v_I = __pyx_t_16;
 
-      /* "jb08/jb2008_subfuncs_cy.pyx":263
+      /* "jb08/jb2008_subfuncs_cy.pyx":265
  * 
  *         for I in range(5):
  *             ALN[I] -= (1 + ALPHA[I]) * ALTR + FACT2 * AMW[I]             # <<<<<<<<<<<<<<
@@ -4158,7 +4158,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       (__pyx_v_ALN[__pyx_t_17]) = ((__pyx_v_ALN[__pyx_t_17]) - (((1.0 + (__pyx_v_ALPHA[__pyx_v_I])) * __pyx_v_ALTR) + (__pyx_v_FACT2 * (__pyx_v_AMW[__pyx_v_I]))));
     }
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":266
+    /* "jb08/jb2008_subfuncs_cy.pyx":268
  * 
  *         # Equation (7) - Note that in CIRA72, AL10T5 = DLOG10(T500)
  *         AL10T5 = log10(TINF)             # <<<<<<<<<<<<<<
@@ -4167,7 +4167,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_AL10T5 = log10(__pyx_v_TINF);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":267
+    /* "jb08/jb2008_subfuncs_cy.pyx":269
  *         # Equation (7) - Note that in CIRA72, AL10T5 = DLOG10(T500)
  *         AL10T5 = log10(TINF)
  *         ALNH5 = (5.5 * AL10T5 - 39.4) * AL10T5 + 73.13             # <<<<<<<<<<<<<<
@@ -4176,7 +4176,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_ALNH5 = ((((5.5 * __pyx_v_AL10T5) - 39.4) * __pyx_v_AL10T5) + 73.13);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":268
+    /* "jb08/jb2008_subfuncs_cy.pyx":270
  *         AL10T5 = log10(TINF)
  *         ALNH5 = (5.5 * AL10T5 - 39.4) * AL10T5 + 73.13
  *         ALN[5] = AL10 * (ALNH5 + 6.) + HSIGN * (log(TLOC4/TLOC3) + FACT1 * SUM3 * AMW[5])             # <<<<<<<<<<<<<<
@@ -4187,7 +4187,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   }
   __pyx_L10:;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":271
+  /* "jb08/jb2008_subfuncs_cy.pyx":273
  * 
  *     # Equation (24)  - J70 Seasonal-Latitudinal Variation
  *     TRASH = (AMJD - 36204) / 365.2422             # <<<<<<<<<<<<<<
@@ -4196,7 +4196,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_TRASH = ((__pyx_v_AMJD - 36204.0) / 365.2422);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":272
+  /* "jb08/jb2008_subfuncs_cy.pyx":274
  *     # Equation (24)  - J70 Seasonal-Latitudinal Variation
  *     TRASH = (AMJD - 36204) / 365.2422
  *     CAPPHI = TRASH%1             # <<<<<<<<<<<<<<
@@ -4205,7 +4205,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_CAPPHI = fmod(__pyx_v_TRASH, 1.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":273
+  /* "jb08/jb2008_subfuncs_cy.pyx":275
  *     TRASH = (AMJD - 36204) / 365.2422
  *     CAPPHI = TRASH%1
  *     DLRSL = 0.02 * (SAT_ALT - 90) * exp(-0.045 * (SAT_ALT - 90)) * copysign(1,SAT_LAT) * sin(TWOPI * CAPPHI+ 1.72) * sin(SAT_LAT)**2             # <<<<<<<<<<<<<<
@@ -4214,7 +4214,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_DLRSL = (((((0.02 * (__pyx_v_SAT_ALT - 90.0)) * exp((-0.045 * (__pyx_v_SAT_ALT - 90.0)))) * copysign(1.0, __pyx_v_SAT_LAT)) * sin(((__pyx_v_TWOPI * __pyx_v_CAPPHI) + 1.72))) * pow(sin(__pyx_v_SAT_LAT), 2.0));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":276
+  /* "jb08/jb2008_subfuncs_cy.pyx":278
  * 
  *     # Equation (23) - Computes the semiannual variation
  *     DLRSA = 0             # <<<<<<<<<<<<<<
@@ -4223,7 +4223,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_DLRSA = 0.0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":277
+  /* "jb08/jb2008_subfuncs_cy.pyx":279
  *     # Equation (23) - Computes the semiannual variation
  *     DLRSA = 0
  *     if Z < 2e3:             # <<<<<<<<<<<<<<
@@ -4233,14 +4233,14 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_t_7 = (__pyx_v_Z < 2e3);
   if (__pyx_t_7) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":279
+    /* "jb08/jb2008_subfuncs_cy.pyx":281
  *     if Z < 2e3:
  *         # Use new semiannual model
  *         FZZ,GTZ,DLRSA = SEMIAN08_cy(YRDAY,ZHT,F10B,S10B,M10B)             # <<<<<<<<<<<<<<
  *         if FZZ < 0: DLRSA = 0
  * 
  */
-    __pyx_t_19 = __pyx_f_4jb08_18jb2008_subfuncs_cy_SEMIAN08_cy(__pyx_v_YRDAY, __pyx_v_ZHT, __pyx_v_F10B, __pyx_v_S10B, __pyx_v_M10B); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 279, __pyx_L1_error)
+    __pyx_t_19 = __pyx_f_4jb08_18jb2008_subfuncs_cy_SEMIAN08_cy(__pyx_v_YRDAY, __pyx_v_ZHT, __pyx_v_F10B, __pyx_v_S10B, __pyx_v_M10B); if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
     __pyx_t_11 = __pyx_t_19.f0;
     __pyx_t_10 = __pyx_t_19.f1;
     __pyx_t_8 = __pyx_t_19.f2;
@@ -4248,7 +4248,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_v_GTZ = __pyx_t_10;
     __pyx_v_DLRSA = __pyx_t_8;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":280
+    /* "jb08/jb2008_subfuncs_cy.pyx":282
  *         # Use new semiannual model
  *         FZZ,GTZ,DLRSA = SEMIAN08_cy(YRDAY,ZHT,F10B,S10B,M10B)
  *         if FZZ < 0: DLRSA = 0             # <<<<<<<<<<<<<<
@@ -4260,7 +4260,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
       __pyx_v_DLRSA = 0.0;
     }
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":277
+    /* "jb08/jb2008_subfuncs_cy.pyx":279
  *     # Equation (23) - Computes the semiannual variation
  *     DLRSA = 0
  *     if Z < 2e3:             # <<<<<<<<<<<<<<
@@ -4269,7 +4269,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":286
+  /* "jb08/jb2008_subfuncs_cy.pyx":288
  *     # However, for Jacchia 70, there is no DLRGM or DLRSA.
  * 
  *     DLR = AL10 * (DLRSL + DLRSA)             # <<<<<<<<<<<<<<
@@ -4278,7 +4278,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_DLR = (__pyx_v_AL10 * (__pyx_v_DLRSL + __pyx_v_DLRSA));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":288
+  /* "jb08/jb2008_subfuncs_cy.pyx":290
  *     DLR = AL10 * (DLRSL + DLRSA)
  *     # Compute mass-density and mean-molecular-weight and convert number density logs from natural to common.
  *     cdef double SUMNM = 0.             # <<<<<<<<<<<<<<
@@ -4287,7 +4287,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_SUMNM = 0.;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":289
+  /* "jb08/jb2008_subfuncs_cy.pyx":291
  *     # Compute mass-density and mean-molecular-weight and convert number density logs from natural to common.
  *     cdef double SUMNM = 0.
  *     for I in range(6):             # <<<<<<<<<<<<<<
@@ -4297,7 +4297,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   for (__pyx_t_16 = 0; __pyx_t_16 < 6; __pyx_t_16+=1) {
     __pyx_v_I = __pyx_t_16;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":290
+    /* "jb08/jb2008_subfuncs_cy.pyx":292
  *     cdef double SUMNM = 0.
  *     for I in range(6):
  *         ALN[I] = ALN[I]+DLR             # <<<<<<<<<<<<<<
@@ -4306,7 +4306,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     (__pyx_v_ALN[__pyx_v_I]) = ((__pyx_v_ALN[__pyx_v_I]) + __pyx_v_DLR);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":291
+    /* "jb08/jb2008_subfuncs_cy.pyx":293
  *     for I in range(6):
  *         ALN[I] = ALN[I]+DLR
  *         AN = exp(ALN[I])             # <<<<<<<<<<<<<<
@@ -4315,7 +4315,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_AN = exp((__pyx_v_ALN[__pyx_v_I]));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":292
+    /* "jb08/jb2008_subfuncs_cy.pyx":294
  *         ALN[I] = ALN[I]+DLR
  *         AN = exp(ALN[I])
  *         SUMNM = SUMNM + AN*AMW[I]             # <<<<<<<<<<<<<<
@@ -4325,7 +4325,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_v_SUMNM = (__pyx_v_SUMNM + (__pyx_v_AN * (__pyx_v_AMW[__pyx_v_I])));
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":294
+  /* "jb08/jb2008_subfuncs_cy.pyx":296
  *         SUMNM = SUMNM + AN*AMW[I]
  * 
  *     RHO = SUMNM/AVOGAD             # <<<<<<<<<<<<<<
@@ -4334,7 +4334,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_RHO = (__pyx_v_SUMNM / __pyx_v_AVOGAD);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":297
+  /* "jb08/jb2008_subfuncs_cy.pyx":299
  * 
  *     # Compute the high altitude exospheric density correction factor
  *     FEX = 1             # <<<<<<<<<<<<<<
@@ -4343,7 +4343,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_FEX = 1.0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":299
+  /* "jb08/jb2008_subfuncs_cy.pyx":301
  *     FEX = 1
  * 
  *     if ZHT >= 1e3 and ZHT < 1.5e3:             # <<<<<<<<<<<<<<
@@ -4361,7 +4361,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
   __pyx_L28_bool_binop_done:;
   if (__pyx_t_7) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":300
+    /* "jb08/jb2008_subfuncs_cy.pyx":302
  * 
  *     if ZHT >= 1e3 and ZHT < 1.5e3:
  *         ZETA = (ZHT - 1e3) * 0.002             # <<<<<<<<<<<<<<
@@ -4370,7 +4370,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_ZETA = ((__pyx_v_ZHT - 1e3) * 0.002);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":301
+    /* "jb08/jb2008_subfuncs_cy.pyx":303
  *     if ZHT >= 1e3 and ZHT < 1.5e3:
  *         ZETA = (ZHT - 1e3) * 0.002
  *         ZETA2 =  ZETA**2             # <<<<<<<<<<<<<<
@@ -4379,7 +4379,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_ZETA2 = pow(__pyx_v_ZETA, 2.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":302
+    /* "jb08/jb2008_subfuncs_cy.pyx":304
  *         ZETA = (ZHT - 1e3) * 0.002
  *         ZETA2 =  ZETA**2
  *         ZETA3 =  ZETA**3             # <<<<<<<<<<<<<<
@@ -4388,7 +4388,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_ZETA3 = pow(__pyx_v_ZETA, 3.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":303
+    /* "jb08/jb2008_subfuncs_cy.pyx":305
  *         ZETA2 =  ZETA**2
  *         ZETA3 =  ZETA**3
  *         F15C = CHT[0] + CHT[1]*F10B + (CHT[2] + CHT[3]*F10B)*1.5e3             # <<<<<<<<<<<<<<
@@ -4397,7 +4397,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_F15C = (((__pyx_v_CHT[0]) + ((__pyx_v_CHT[1]) * __pyx_v_F10B)) + (((__pyx_v_CHT[2]) + ((__pyx_v_CHT[3]) * __pyx_v_F10B)) * 1.5e3));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":304
+    /* "jb08/jb2008_subfuncs_cy.pyx":306
  *         ZETA3 =  ZETA**3
  *         F15C = CHT[0] + CHT[1]*F10B + (CHT[2] + CHT[3]*F10B)*1.5e3
  *         F15C_ZETA = (CHT[2] + CHT[3]*F10B) * 500             # <<<<<<<<<<<<<<
@@ -4406,7 +4406,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_F15C_ZETA = (((__pyx_v_CHT[2]) + ((__pyx_v_CHT[3]) * __pyx_v_F10B)) * 500.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":305
+    /* "jb08/jb2008_subfuncs_cy.pyx":307
  *         F15C = CHT[0] + CHT[1]*F10B + (CHT[2] + CHT[3]*F10B)*1.5e3
  *         F15C_ZETA = (CHT[2] + CHT[3]*F10B) * 500
  *         FEX2 = 3 * F15C - F15C_ZETA - 3             # <<<<<<<<<<<<<<
@@ -4415,7 +4415,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_FEX2 = (((3.0 * __pyx_v_F15C) - __pyx_v_F15C_ZETA) - 3.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":306
+    /* "jb08/jb2008_subfuncs_cy.pyx":308
  *         F15C_ZETA = (CHT[2] + CHT[3]*F10B) * 500
  *         FEX2 = 3 * F15C - F15C_ZETA - 3
  *         FEX3 = F15C_ZETA - 2 * F15C + 2             # <<<<<<<<<<<<<<
@@ -4424,7 +4424,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_FEX3 = ((__pyx_v_F15C_ZETA - (2.0 * __pyx_v_F15C)) + 2.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":307
+    /* "jb08/jb2008_subfuncs_cy.pyx":309
  *         FEX2 = 3 * F15C - F15C_ZETA - 3
  *         FEX3 = F15C_ZETA - 2 * F15C + 2
  *         FEX = 1 + FEX2 * ZETA2 + FEX3 * ZETA3             # <<<<<<<<<<<<<<
@@ -4433,7 +4433,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
     __pyx_v_FEX = ((1.0 + (__pyx_v_FEX2 * __pyx_v_ZETA2)) + (__pyx_v_FEX3 * __pyx_v_ZETA3));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":299
+    /* "jb08/jb2008_subfuncs_cy.pyx":301
  *     FEX = 1
  * 
  *     if ZHT >= 1e3 and ZHT < 1.5e3:             # <<<<<<<<<<<<<<
@@ -4442,7 +4442,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":309
+  /* "jb08/jb2008_subfuncs_cy.pyx":311
  *         FEX = 1 + FEX2 * ZETA2 + FEX3 * ZETA3
  * 
  *     if ZHT >= 1.5e3: FEX = CHT[0] + CHT[1]*F10B + CHT[2]*ZHT + CHT[3]*F10B*ZHT             # <<<<<<<<<<<<<<
@@ -4454,7 +4454,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
     __pyx_v_FEX = ((((__pyx_v_CHT[0]) + ((__pyx_v_CHT[1]) * __pyx_v_F10B)) + ((__pyx_v_CHT[2]) * __pyx_v_ZHT)) + (((__pyx_v_CHT[3]) * __pyx_v_F10B) * __pyx_v_ZHT));
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":312
+  /* "jb08/jb2008_subfuncs_cy.pyx":314
  * 
  *     # Apply the exospheric density correction factor.
  *     RHO *= FEX             # <<<<<<<<<<<<<<
@@ -4463,7 +4463,7 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  */
   __pyx_v_RHO = (__pyx_v_RHO * __pyx_v_FEX);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":314
+  /* "jb08/jb2008_subfuncs_cy.pyx":316
  *     RHO *= FEX
  * 
  *     return TEMP,RHO             # <<<<<<<<<<<<<<
@@ -4471,23 +4471,23 @@ static PyObject *__pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(double __pyx_v
  * @cython.cdivision(True)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_13 = __Pyx_carray_to_py_double(__pyx_v_TEMP, 2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_t_13 = __Pyx_carray_to_py_double(__pyx_v_TEMP, 2); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_13);
-  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_RHO); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_t_12 = PyFloat_FromDouble(__pyx_v_RHO); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_12);
-  __pyx_t_21 = PyTuple_New(2); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 314, __pyx_L1_error)
+  __pyx_t_21 = PyTuple_New(2); if (unlikely(!__pyx_t_21)) __PYX_ERR(0, 316, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_21);
   __Pyx_GIVEREF(__pyx_t_13);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_21, 0, __pyx_t_13)) __PYX_ERR(0, 314, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_21, 0, __pyx_t_13)) __PYX_ERR(0, 316, __pyx_L1_error);
   __Pyx_GIVEREF(__pyx_t_12);
-  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_21, 1, __pyx_t_12)) __PYX_ERR(0, 314, __pyx_L1_error);
+  if (__Pyx_PyTuple_SET_ITEM(__pyx_t_21, 1, __pyx_t_12)) __PYX_ERR(0, 316, __pyx_L1_error);
   __pyx_t_13 = 0;
   __pyx_t_12 = 0;
   __pyx_r = __pyx_t_21;
   __pyx_t_21 = 0;
   goto __pyx_L0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":12
+  /* "jb08/jb2008_subfuncs_cy.pyx":14
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cpdef jb2008_mod_cy(double AMJD, double YRDAY,             # <<<<<<<<<<<<<<
@@ -4607,7 +4607,7 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[0]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else goto __pyx_L5_argtuple_error;
         CYTHON_FALLTHROUGH;
         case  1:
@@ -4615,9 +4615,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[1]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 1); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 1); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
@@ -4625,9 +4625,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[2]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 2); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 2); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
@@ -4635,9 +4635,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[3]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 3); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 3); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  4:
@@ -4645,9 +4645,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[4]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 4); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 4); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  5:
@@ -4655,9 +4655,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[5]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 5); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 5); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  6:
@@ -4665,9 +4665,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[6]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 6); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 6); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  7:
@@ -4675,9 +4675,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[7]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 7); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 7); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  8:
@@ -4685,9 +4685,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[8]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 8); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 8); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  9:
@@ -4695,9 +4695,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[9]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 9); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 9); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 10:
@@ -4705,9 +4705,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[10]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 10); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 10); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 11:
@@ -4715,9 +4715,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[11]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 11); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 11); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 12:
@@ -4725,9 +4725,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[12]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 12); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 12); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 13:
@@ -4735,9 +4735,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[13]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 13); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 13); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 14:
@@ -4745,9 +4745,9 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[14]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 14); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 14); __PYX_ERR(0, 14, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case 15:
@@ -4755,14 +4755,14 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
           (void)__Pyx_Arg_NewRef_FASTCALL(values[15]);
           kw_args--;
         }
-        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
+        else if (unlikely(PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
         else {
-          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 15); __PYX_ERR(0, 12, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, 15); __PYX_ERR(0, 14, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
         const Py_ssize_t kwd_pos_args = __pyx_nargs;
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "jb2008_mod_cy") < 0)) __PYX_ERR(0, 12, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_kwvalues, __pyx_pyargnames, 0, values + 0, kwd_pos_args, "jb2008_mod_cy") < 0)) __PYX_ERR(0, 14, __pyx_L3_error)
       }
     } else if (unlikely(__pyx_nargs != 16)) {
       goto __pyx_L5_argtuple_error;
@@ -4784,26 +4784,26 @@ PyObject *__pyx_args, PyObject *__pyx_kwds
       values[14] = __Pyx_Arg_FASTCALL(__pyx_args, 14);
       values[15] = __Pyx_Arg_FASTCALL(__pyx_args, 15);
     }
-    __pyx_v_AMJD = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_AMJD == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
-    __pyx_v_YRDAY = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_YRDAY == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 12, __pyx_L3_error)
-    __pyx_v_SUN_RA = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_SUN_RA == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L3_error)
-    __pyx_v_SUN_DEC = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_SUN_DEC == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 13, __pyx_L3_error)
-    __pyx_v_SAT_RA = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_SAT_RA == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
-    __pyx_v_SAT_LAT = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_SAT_LAT == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
-    __pyx_v_SAT_ALT = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_SAT_ALT == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
-    __pyx_v_F10 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_F10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
-    __pyx_v_F10B = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_F10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
-    __pyx_v_S10 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_S10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
-    __pyx_v_S10B = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_S10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
-    __pyx_v_M10 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_M10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
-    __pyx_v_M10B = __pyx_PyFloat_AsDouble(values[12]); if (unlikely((__pyx_v_M10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
-    __pyx_v_Y10 = __pyx_PyFloat_AsDouble(values[13]); if (unlikely((__pyx_v_Y10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
-    __pyx_v_Y10B = __pyx_PyFloat_AsDouble(values[14]); if (unlikely((__pyx_v_Y10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
-    __pyx_v_DSTDTC = __pyx_PyFloat_AsDouble(values[15]); if (unlikely((__pyx_v_DSTDTC == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_AMJD = __pyx_PyFloat_AsDouble(values[0]); if (unlikely((__pyx_v_AMJD == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
+    __pyx_v_YRDAY = __pyx_PyFloat_AsDouble(values[1]); if (unlikely((__pyx_v_YRDAY == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
+    __pyx_v_SUN_RA = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_SUN_RA == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
+    __pyx_v_SUN_DEC = __pyx_PyFloat_AsDouble(values[3]); if (unlikely((__pyx_v_SUN_DEC == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 15, __pyx_L3_error)
+    __pyx_v_SAT_RA = __pyx_PyFloat_AsDouble(values[4]); if (unlikely((__pyx_v_SAT_RA == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_SAT_LAT = __pyx_PyFloat_AsDouble(values[5]); if (unlikely((__pyx_v_SAT_LAT == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_SAT_ALT = __pyx_PyFloat_AsDouble(values[6]); if (unlikely((__pyx_v_SAT_ALT == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
+    __pyx_v_F10 = __pyx_PyFloat_AsDouble(values[7]); if (unlikely((__pyx_v_F10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_F10B = __pyx_PyFloat_AsDouble(values[8]); if (unlikely((__pyx_v_F10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_S10 = __pyx_PyFloat_AsDouble(values[9]); if (unlikely((__pyx_v_S10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_S10B = __pyx_PyFloat_AsDouble(values[10]); if (unlikely((__pyx_v_S10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 17, __pyx_L3_error)
+    __pyx_v_M10 = __pyx_PyFloat_AsDouble(values[11]); if (unlikely((__pyx_v_M10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 18, __pyx_L3_error)
+    __pyx_v_M10B = __pyx_PyFloat_AsDouble(values[12]); if (unlikely((__pyx_v_M10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 18, __pyx_L3_error)
+    __pyx_v_Y10 = __pyx_PyFloat_AsDouble(values[13]); if (unlikely((__pyx_v_Y10 == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 18, __pyx_L3_error)
+    __pyx_v_Y10B = __pyx_PyFloat_AsDouble(values[14]); if (unlikely((__pyx_v_Y10B == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 18, __pyx_L3_error)
+    __pyx_v_DSTDTC = __pyx_PyFloat_AsDouble(values[15]); if (unlikely((__pyx_v_DSTDTC == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 19, __pyx_L3_error)
   }
   goto __pyx_L6_skip;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, __pyx_nargs); __PYX_ERR(0, 12, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("jb2008_mod_cy", 1, 16, 16, __pyx_nargs); __PYX_ERR(0, 14, __pyx_L3_error)
   __pyx_L6_skip:;
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -4839,7 +4839,7 @@ static PyObject *__pyx_pf_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(CYTHON_UNUSED
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("jb2008_mod_cy", 1);
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(__pyx_v_AMJD, __pyx_v_YRDAY, __pyx_v_SUN_RA, __pyx_v_SUN_DEC, __pyx_v_SAT_RA, __pyx_v_SAT_LAT, __pyx_v_SAT_ALT, __pyx_v_F10, __pyx_v_F10B, __pyx_v_S10, __pyx_v_S10B, __pyx_v_M10, __pyx_v_M10B, __pyx_v_Y10, __pyx_v_Y10B, __pyx_v_DSTDTC, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_1 = __pyx_f_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(__pyx_v_AMJD, __pyx_v_YRDAY, __pyx_v_SUN_RA, __pyx_v_SUN_DEC, __pyx_v_SAT_RA, __pyx_v_SAT_LAT, __pyx_v_SAT_ALT, __pyx_v_F10, __pyx_v_F10B, __pyx_v_S10, __pyx_v_S10B, __pyx_v_M10, __pyx_v_M10B, __pyx_v_Y10, __pyx_v_Y10B, __pyx_v_DSTDTC, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_r = __pyx_t_1;
   __pyx_t_1 = 0;
@@ -4856,7 +4856,7 @@ static PyObject *__pyx_pf_4jb08_18jb2008_subfuncs_cy_jb2008_mod_cy(CYTHON_UNUSED
   return __pyx_r;
 }
 
-/* "jb08/jb2008_subfuncs_cy.pyx":320
+/* "jb08/jb2008_subfuncs_cy.pyx":322
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double XAMBAR_cy(double Z):             # <<<<<<<<<<<<<<
@@ -4873,7 +4873,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
   double __pyx_t_1[7];
   long __pyx_t_2;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":324
+  /* "jb08/jb2008_subfuncs_cy.pyx":326
  *     Evaluates Equation (1)
  *     '''
  *     cdef double[7] C = [28.15204,-8.5586e-2,1.2840e-4,-1.0056e-5,-1.0210e-5,1.5044e-6,9.9826e-8]             # <<<<<<<<<<<<<<
@@ -4889,7 +4889,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
   __pyx_t_1[6] = 9.9826e-8;
   memcpy(&(__pyx_v_C[0]), __pyx_t_1, sizeof(__pyx_v_C[0]) * (7));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":325
+  /* "jb08/jb2008_subfuncs_cy.pyx":327
  *     '''
  *     cdef double[7] C = [28.15204,-8.5586e-2,1.2840e-4,-1.0056e-5,-1.0210e-5,1.5044e-6,9.9826e-8]
  *     DZ = Z - 100             # <<<<<<<<<<<<<<
@@ -4898,7 +4898,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
  */
   __pyx_v_DZ = (__pyx_v_Z - 100.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":326
+  /* "jb08/jb2008_subfuncs_cy.pyx":328
  *     cdef double[7] C = [28.15204,-8.5586e-2,1.2840e-4,-1.0056e-5,-1.0210e-5,1.5044e-6,9.9826e-8]
  *     DZ = Z - 100
  *     AMB = C[6]             # <<<<<<<<<<<<<<
@@ -4907,7 +4907,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
  */
   __pyx_v_AMB = (__pyx_v_C[6]);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":327
+  /* "jb08/jb2008_subfuncs_cy.pyx":329
  *     DZ = Z - 100
  *     AMB = C[6]
  *     for i in range(5,-1,-1): AMB = DZ * AMB + C[i]             # <<<<<<<<<<<<<<
@@ -4919,7 +4919,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
     __pyx_v_AMB = ((__pyx_v_DZ * __pyx_v_AMB) + (__pyx_v_C[__pyx_v_i]));
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":329
+  /* "jb08/jb2008_subfuncs_cy.pyx":331
  *     for i in range(5,-1,-1): AMB = DZ * AMB + C[i]
  * 
  *     return AMB             # <<<<<<<<<<<<<<
@@ -4929,7 +4929,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
   __pyx_r = __pyx_v_AMB;
   goto __pyx_L0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":320
+  /* "jb08/jb2008_subfuncs_cy.pyx":322
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double XAMBAR_cy(double Z):             # <<<<<<<<<<<<<<
@@ -4942,7 +4942,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
   return __pyx_r;
 }
 
-/* "jb08/jb2008_subfuncs_cy.pyx":335
+/* "jb08/jb2008_subfuncs_cy.pyx":337
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double XGRAV_cy(double Z):             # <<<<<<<<<<<<<<
@@ -4953,7 +4953,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XAMBAR_cy(double __pyx_v_Z) {
 static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(double __pyx_v_Z) {
   double __pyx_r;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":339
+  /* "jb08/jb2008_subfuncs_cy.pyx":341
  *     Evaluates Equation (8)
  *     '''
  *     return 9.80665/(1 + Z/6356.766)**2.             # <<<<<<<<<<<<<<
@@ -4963,7 +4963,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(double __pyx_v_Z) {
   __pyx_r = (9.80665 / pow((1.0 + (__pyx_v_Z / 6356.766)), 2.));
   goto __pyx_L0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":335
+  /* "jb08/jb2008_subfuncs_cy.pyx":337
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double XGRAV_cy(double Z):             # <<<<<<<<<<<<<<
@@ -4976,7 +4976,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XGRAV_cy(double __pyx_v_Z) {
   return __pyx_r;
 }
 
-/* "jb08/jb2008_subfuncs_cy.pyx":345
+/* "jb08/jb2008_subfuncs_cy.pyx":347
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double XLOCAL_cy(double Z, double[4] TC):             # <<<<<<<<<<<<<<
@@ -4994,7 +4994,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(double __pyx_v_Z, dou
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":349
+  /* "jb08/jb2008_subfuncs_cy.pyx":351
  *     Evaluates Equation (10) or Equation (13), depending on Z
  *     '''
  *     cdef double DZ = Z - 125             # <<<<<<<<<<<<<<
@@ -5003,7 +5003,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(double __pyx_v_Z, dou
  */
   __pyx_v_DZ = (__pyx_v_Z - 125.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":351
+  /* "jb08/jb2008_subfuncs_cy.pyx":353
  *     cdef double DZ = Z - 125
  *     cdef double XL
  *     if DZ > 0:             # <<<<<<<<<<<<<<
@@ -5013,17 +5013,17 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(double __pyx_v_Z, dou
   __pyx_t_1 = (__pyx_v_DZ > 0.0);
   if (__pyx_t_1) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":352
+    /* "jb08/jb2008_subfuncs_cy.pyx":354
  *     cdef double XL
  *     if DZ > 0:
  *       XL = TC[0] + TC[2] * atan(TC[3]*DZ*(1. + 4.5e-6*DZ**2.5))             # <<<<<<<<<<<<<<
  *     else:
  *       XL = ((-9.8204695e-6 * DZ - 7.3039742e-4) * DZ**2 + 1)* DZ * TC[1] + TC[0]
  */
-    __pyx_t_2 = __Pyx_SoftComplexToDouble(__Pyx_c_prod_double(__pyx_t_double_complex_from_parts(((__pyx_v_TC[3]) * __pyx_v_DZ), 0), __Pyx_c_sum_double(__pyx_t_double_complex_from_parts(1., 0), __Pyx_c_prod_double(__pyx_t_double_complex_from_parts(4.5e-6, 0), __Pyx_c_pow_double(__pyx_t_double_complex_from_parts(__pyx_v_DZ, 0), __pyx_t_double_complex_from_parts(2.5, 0))))), 1); if (unlikely(__pyx_t_2 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 352, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_SoftComplexToDouble(__Pyx_c_prod_double(__pyx_t_double_complex_from_parts(((__pyx_v_TC[3]) * __pyx_v_DZ), 0), __Pyx_c_sum_double(__pyx_t_double_complex_from_parts(1., 0), __Pyx_c_prod_double(__pyx_t_double_complex_from_parts(4.5e-6, 0), __Pyx_c_pow_double(__pyx_t_double_complex_from_parts(__pyx_v_DZ, 0), __pyx_t_double_complex_from_parts(2.5, 0))))), 1); if (unlikely(__pyx_t_2 == ((double)-1) && PyErr_Occurred())) __PYX_ERR(0, 354, __pyx_L1_error)
     __pyx_v_XL = ((__pyx_v_TC[0]) + ((__pyx_v_TC[2]) * atan(__pyx_t_2)));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":351
+    /* "jb08/jb2008_subfuncs_cy.pyx":353
  *     cdef double DZ = Z - 125
  *     cdef double XL
  *     if DZ > 0:             # <<<<<<<<<<<<<<
@@ -5033,7 +5033,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(double __pyx_v_Z, dou
     goto __pyx_L3;
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":354
+  /* "jb08/jb2008_subfuncs_cy.pyx":356
  *       XL = TC[0] + TC[2] * atan(TC[3]*DZ*(1. + 4.5e-6*DZ**2.5))
  *     else:
  *       XL = ((-9.8204695e-6 * DZ - 7.3039742e-4) * DZ**2 + 1)* DZ * TC[1] + TC[0]             # <<<<<<<<<<<<<<
@@ -5045,7 +5045,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(double __pyx_v_Z, dou
   }
   __pyx_L3:;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":355
+  /* "jb08/jb2008_subfuncs_cy.pyx":357
  *     else:
  *       XL = ((-9.8204695e-6 * DZ - 7.3039742e-4) * DZ**2 + 1)* DZ * TC[1] + TC[0]
  *     return XL             # <<<<<<<<<<<<<<
@@ -5055,7 +5055,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(double __pyx_v_Z, dou
   __pyx_r = __pyx_v_XL;
   goto __pyx_L0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":345
+  /* "jb08/jb2008_subfuncs_cy.pyx":347
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double XLOCAL_cy(double Z, double[4] TC):             # <<<<<<<<<<<<<<
@@ -5071,7 +5071,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_XLOCAL_cy(double __pyx_v_Z, dou
   return __pyx_r;
 }
 
-/* "jb08/jb2008_subfuncs_cy.pyx":361
+/* "jb08/jb2008_subfuncs_cy.pyx":363
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double DTSUB_cy(double F10, double XLST, double XLAT, double ZHT):             # <<<<<<<<<<<<<<
@@ -5104,7 +5104,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   int __pyx_t_3;
   int __pyx_t_4;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":373
+  /* "jb08/jb2008_subfuncs_cy.pyx":375
  *     DTC       = (O)   dTc correction
  *     '''
  *     cdef double[19] B = [-4.57512297, -5.12114909, -69.3003609,\             # <<<<<<<<<<<<<<
@@ -5132,7 +5132,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_t_1[18] = 36.1416936;
   memcpy(&(__pyx_v_B[0]), __pyx_t_1, sizeof(__pyx_v_B[0]) * (19));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":380
+  /* "jb08/jb2008_subfuncs_cy.pyx":382
  *                         1818.70931, -2373.89204,  996.703815,\
  *                         36.1416936]
  *     cdef double[23] C = [-15.5986211, -5.12114909, -69.3003609,\             # <<<<<<<<<<<<<<
@@ -5164,7 +5164,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_t_2[22] = 2.75555432;
   memcpy(&(__pyx_v_C[0]), __pyx_t_2, sizeof(__pyx_v_C[0]) * (23));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":389
+  /* "jb08/jb2008_subfuncs_cy.pyx":391
  *                   -21.2825156, 2.75555432]
  * 
  *     cdef double DTC = 0.             # <<<<<<<<<<<<<<
@@ -5173,7 +5173,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   __pyx_v_DTC = 0.;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":390
+  /* "jb08/jb2008_subfuncs_cy.pyx":392
  * 
  *     cdef double DTC = 0.
  *     cdef double tx = XLST/24.             # <<<<<<<<<<<<<<
@@ -5182,7 +5182,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   __pyx_v_tx = (__pyx_v_XLST / 24.);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":391
+  /* "jb08/jb2008_subfuncs_cy.pyx":393
  *     cdef double DTC = 0.
  *     cdef double tx = XLST/24.
  *     cdef double ycs = cos(XLAT)             # <<<<<<<<<<<<<<
@@ -5191,7 +5191,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   __pyx_v_ycs = cos(__pyx_v_XLAT);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":392
+  /* "jb08/jb2008_subfuncs_cy.pyx":394
  *     cdef double tx = XLST/24.
  *     cdef double ycs = cos(XLAT)
  *     cdef double F = (F10 - 100)/100             # <<<<<<<<<<<<<<
@@ -5200,7 +5200,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   __pyx_v_F = ((__pyx_v_F10 - 100.0) / 100.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":399
+  /* "jb08/jb2008_subfuncs_cy.pyx":401
  * 
  *     # calculates dTc
  *     if ZHT >= 120 and ZHT <= 200:             # <<<<<<<<<<<<<<
@@ -5218,7 +5218,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":400
+    /* "jb08/jb2008_subfuncs_cy.pyx":402
  *     # calculates dTc
  *     if ZHT >= 120 and ZHT <= 200:
  *         H = (ZHT - 200.)/50.             # <<<<<<<<<<<<<<
@@ -5227,7 +5227,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_H = ((__pyx_v_ZHT - 200.) / 50.);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":401
+    /* "jb08/jb2008_subfuncs_cy.pyx":403
  *     if ZHT >= 120 and ZHT <= 200:
  *         H = (ZHT - 200.)/50.
  *         DTC200 = C[16] + C[17]*tx*ycs + C[18]*tx**2*ycs + C[19]*tx**3*ycs + C[20]*F*ycs + C[21]*tx*F*ycs + C[22]*tx**2*F*ycs             # <<<<<<<<<<<<<<
@@ -5236,7 +5236,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC200 = (((((((__pyx_v_C[16]) + (((__pyx_v_C[17]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_C[18]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_C[19]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_C[20]) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[21]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[22]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":405
+    /* "jb08/jb2008_subfuncs_cy.pyx":407
  *         sum_ = C[0] + B[1]*F + C[2]*tx*F + C[3]*tx**2*F + C[4]*tx**3*F + C[5]*tx**4*F + C[6]*tx**5*F +\
  *                C[7]*tx*ycs + C[8]*tx**2*ycs + C[9]*tx**3*ycs + C[10]*tx**4*ycs + C[11]*tx**5*ycs + C[12]*ycs+\
  *                C[13]*F*ycs + C[14]*tx*F*ycs  + C[15]*tx**2*F*ycs             # <<<<<<<<<<<<<<
@@ -5245,7 +5245,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_sum_ = ((((((((((((((((__pyx_v_C[0]) + ((__pyx_v_B[1]) * __pyx_v_F)) + (((__pyx_v_C[2]) * __pyx_v_tx) * __pyx_v_F)) + (((__pyx_v_C[3]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F)) + (((__pyx_v_C[4]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_F)) + (((__pyx_v_C[5]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_F)) + (((__pyx_v_C[6]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_F)) + (((__pyx_v_C[7]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_C[8]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_C[9]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_C[10]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs)) + (((__pyx_v_C[11]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs)) + ((__pyx_v_C[12]) * __pyx_v_ycs)) + (((__pyx_v_C[13]) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[14]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[15]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":407
+    /* "jb08/jb2008_subfuncs_cy.pyx":409
  *                C[13]*F*ycs + C[14]*tx*F*ycs  + C[15]*tx**2*F*ycs
  * 
  *         DTC200DZ = sum_             # <<<<<<<<<<<<<<
@@ -5254,7 +5254,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC200DZ = __pyx_v_sum_;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":408
+    /* "jb08/jb2008_subfuncs_cy.pyx":410
  * 
  *         DTC200DZ = sum_
  *         CC = 3.00*DTC200 - DTC200DZ             # <<<<<<<<<<<<<<
@@ -5263,7 +5263,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_CC = ((3.00 * __pyx_v_DTC200) - __pyx_v_DTC200DZ);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":409
+    /* "jb08/jb2008_subfuncs_cy.pyx":411
  *         DTC200DZ = sum_
  *         CC = 3.00*DTC200 - DTC200DZ
  *         DD = DTC200 - CC             # <<<<<<<<<<<<<<
@@ -5272,7 +5272,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DD = (__pyx_v_DTC200 - __pyx_v_CC);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":410
+    /* "jb08/jb2008_subfuncs_cy.pyx":412
  *         CC = 3.00*DTC200 - DTC200DZ
  *         DD = DTC200 - CC
  *         ZP = (ZHT-120.)/80.             # <<<<<<<<<<<<<<
@@ -5281,7 +5281,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_ZP = ((__pyx_v_ZHT - 120.) / 80.);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":411
+    /* "jb08/jb2008_subfuncs_cy.pyx":413
  *         DD = DTC200 - CC
  *         ZP = (ZHT-120.)/80.
  *         DTC = CC*ZP*ZP + DD*ZP*ZP*ZP             # <<<<<<<<<<<<<<
@@ -5290,7 +5290,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC = (((__pyx_v_CC * __pyx_v_ZP) * __pyx_v_ZP) + (((__pyx_v_DD * __pyx_v_ZP) * __pyx_v_ZP) * __pyx_v_ZP));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":399
+    /* "jb08/jb2008_subfuncs_cy.pyx":401
  * 
  *     # calculates dTc
  *     if ZHT >= 120 and ZHT <= 200:             # <<<<<<<<<<<<<<
@@ -5299,7 +5299,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":413
+  /* "jb08/jb2008_subfuncs_cy.pyx":415
  *         DTC = CC*ZP*ZP + DD*ZP*ZP*ZP
  * 
  *     if ZHT > 200 and ZHT <= 240:             # <<<<<<<<<<<<<<
@@ -5317,7 +5317,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":414
+    /* "jb08/jb2008_subfuncs_cy.pyx":416
  * 
  *     if ZHT > 200 and ZHT <= 240:
  *         H = (ZHT - 200)/50             # <<<<<<<<<<<<<<
@@ -5326,7 +5326,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_H = ((__pyx_v_ZHT - 200.0) / 50.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":418
+    /* "jb08/jb2008_subfuncs_cy.pyx":420
  *                C[7]*tx*ycs*H + C[8]*tx**2*ycs*H + C[9]*tx**3*ycs*H + C[10]*tx**4*ycs*H + C[11]*tx**5*ycs*H + C[12]*ycs*H+\
  *                C[13]*F*ycs*H + C[14]*tx*F*ycs*H + C[15]*tx**2*F*ycs*H + C[16] + C[17]*tx*ycs + C[18]*tx**2*ycs +\
  *                C[19]*tx**3*ycs + C[20]*F*ycs + C[21]*tx*F*ycs + C[22]*tx**2*F*ycs             # <<<<<<<<<<<<<<
@@ -5335,7 +5335,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_sum_ = ((((((((((((((((((((((((__pyx_v_C[0]) * __pyx_v_H) + (((__pyx_v_B[1]) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[2]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[3]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[4]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[5]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[6]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[7]) * __pyx_v_tx) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[8]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[9]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[10]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[11]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs) * __pyx_v_H)) + (((__pyx_v_C[12]) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[13]) * __pyx_v_F) * __pyx_v_ycs) * __pyx_v_H)) + (((((__pyx_v_C[14]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_ycs) * __pyx_v_H)) + (((((__pyx_v_C[15]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_ycs) * __pyx_v_H)) + (__pyx_v_C[16])) + (((__pyx_v_C[17]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_C[18]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_C[19]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_C[20]) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[21]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[22]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":419
+    /* "jb08/jb2008_subfuncs_cy.pyx":421
  *                C[13]*F*ycs*H + C[14]*tx*F*ycs*H + C[15]*tx**2*F*ycs*H + C[16] + C[17]*tx*ycs + C[18]*tx**2*ycs +\
  *                C[19]*tx**3*ycs + C[20]*F*ycs + C[21]*tx*F*ycs + C[22]*tx**2*F*ycs
  *         DTC = sum_             # <<<<<<<<<<<<<<
@@ -5344,7 +5344,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC = __pyx_v_sum_;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":413
+    /* "jb08/jb2008_subfuncs_cy.pyx":415
  *         DTC = CC*ZP*ZP + DD*ZP*ZP*ZP
  * 
  *     if ZHT > 200 and ZHT <= 240:             # <<<<<<<<<<<<<<
@@ -5353,7 +5353,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":421
+  /* "jb08/jb2008_subfuncs_cy.pyx":423
  *         DTC = sum_
  * 
  *     if ZHT > 240 and ZHT <= 300.0:             # <<<<<<<<<<<<<<
@@ -5371,7 +5371,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_L10_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":422
+    /* "jb08/jb2008_subfuncs_cy.pyx":424
  * 
  *     if ZHT > 240 and ZHT <= 300.0:
  *         H = 0.8             # <<<<<<<<<<<<<<
@@ -5380,7 +5380,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_H = 0.8;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":426
+    /* "jb08/jb2008_subfuncs_cy.pyx":428
  *                C[7]*tx*ycs*H + C[8]*tx**2*ycs*H + C[9]*tx**3*ycs*H + C[10]*tx**4*ycs*H + C[11]*tx**5*ycs*H + C[12]*ycs*H+\
  *                C[13]*F*ycs*H + C[14]*tx*F*ycs*H + C[15]*tx**2*F*ycs*H + C[16] + C[17]*tx*ycs + C[18]*tx**2*ycs +\
  *                C[19]*tx**3*ycs + C[20]*F*ycs + C[21]*tx*F*ycs + C[22]*tx**2*F*ycs             # <<<<<<<<<<<<<<
@@ -5389,7 +5389,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_sum_ = ((((((((((((((((((((((((__pyx_v_C[0]) * __pyx_v_H) + (((__pyx_v_B[1]) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[2]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[3]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[4]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[5]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[6]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_F) * __pyx_v_H)) + ((((__pyx_v_C[7]) * __pyx_v_tx) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[8]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[9]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[10]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[11]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs) * __pyx_v_H)) + (((__pyx_v_C[12]) * __pyx_v_ycs) * __pyx_v_H)) + ((((__pyx_v_C[13]) * __pyx_v_F) * __pyx_v_ycs) * __pyx_v_H)) + (((((__pyx_v_C[14]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_ycs) * __pyx_v_H)) + (((((__pyx_v_C[15]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_ycs) * __pyx_v_H)) + (__pyx_v_C[16])) + (((__pyx_v_C[17]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_C[18]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_C[19]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_C[20]) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[21]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[22]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":427
+    /* "jb08/jb2008_subfuncs_cy.pyx":429
  *                C[13]*F*ycs*H + C[14]*tx*F*ycs*H + C[15]*tx**2*F*ycs*H + C[16] + C[17]*tx*ycs + C[18]*tx**2*ycs +\
  *                C[19]*tx**3*ycs + C[20]*F*ycs + C[21]*tx*F*ycs + C[22]*tx**2*F*ycs
  *         AA = sum_             # <<<<<<<<<<<<<<
@@ -5398,7 +5398,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_AA = __pyx_v_sum_;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":430
+    /* "jb08/jb2008_subfuncs_cy.pyx":432
  *         BB = C[0] + B[1]*F + C[2]*tx*F + C[3]*tx**2*F + C[4]*tx**3*F + C[5]*tx**4*F + C[6]*tx**5*F +\
  *              C[7]*tx*ycs + C[8]*tx**2*ycs + C[9]*tx**3*ycs + C[10]*tx**4*ycs + C[11]*tx**5*ycs + C[12]*ycs +\
  *              C[13]*F*ycs + C[14]*tx*F*ycs + C[15]*tx**2*F*ycs             # <<<<<<<<<<<<<<
@@ -5407,7 +5407,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_BB = ((((((((((((((((__pyx_v_C[0]) + ((__pyx_v_B[1]) * __pyx_v_F)) + (((__pyx_v_C[2]) * __pyx_v_tx) * __pyx_v_F)) + (((__pyx_v_C[3]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F)) + (((__pyx_v_C[4]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_F)) + (((__pyx_v_C[5]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_F)) + (((__pyx_v_C[6]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_F)) + (((__pyx_v_C[7]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_C[8]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_C[9]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_C[10]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs)) + (((__pyx_v_C[11]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs)) + ((__pyx_v_C[12]) * __pyx_v_ycs)) + (((__pyx_v_C[13]) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[14]) * __pyx_v_tx) * __pyx_v_F) * __pyx_v_ycs)) + ((((__pyx_v_C[15]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":431
+    /* "jb08/jb2008_subfuncs_cy.pyx":433
  *              C[7]*tx*ycs + C[8]*tx**2*ycs + C[9]*tx**3*ycs + C[10]*tx**4*ycs + C[11]*tx**5*ycs + C[12]*ycs +\
  *              C[13]*F*ycs + C[14]*tx*F*ycs + C[15]*tx**2*F*ycs
  *         H = 3.             # <<<<<<<<<<<<<<
@@ -5416,7 +5416,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_H = 3.;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":434
+    /* "jb08/jb2008_subfuncs_cy.pyx":436
  *         sum_ = B[0] + B[1]*F + B[2]*tx*F + B[3]*tx**2*F + B[4]*tx**3*F + B[5]*tx**4*F + B[6]*tx**5*F + \
  *                B[7]*tx*ycs + B[8]*tx**2*ycs + B[9]*tx**3*ycs + B[10]*tx**4*ycs + B[11]*tx**5*ycs + B[12]*H*ycs +\
  *                B[13]*tx*H*ycs + B[14]*tx**2*H*ycs + B[15]*tx**3*H*ycs + B[16]*tx**4*H*ycs + B[17]*tx**5*H*ycs + B[18]*ycs             # <<<<<<<<<<<<<<
@@ -5425,7 +5425,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_sum_ = (((((((((((((((((((__pyx_v_B[0]) + ((__pyx_v_B[1]) * __pyx_v_F)) + (((__pyx_v_B[2]) * __pyx_v_tx) * __pyx_v_F)) + (((__pyx_v_B[3]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F)) + (((__pyx_v_B[4]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_F)) + (((__pyx_v_B[5]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_F)) + (((__pyx_v_B[6]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_F)) + (((__pyx_v_B[7]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_B[8]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_B[9]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_B[10]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs)) + (((__pyx_v_B[11]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs)) + (((__pyx_v_B[12]) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[13]) * __pyx_v_tx) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[14]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[15]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[16]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[17]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((__pyx_v_B[18]) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":435
+    /* "jb08/jb2008_subfuncs_cy.pyx":437
  *                B[7]*tx*ycs + B[8]*tx**2*ycs + B[9]*tx**3*ycs + B[10]*tx**4*ycs + B[11]*tx**5*ycs + B[12]*H*ycs +\
  *                B[13]*tx*H*ycs + B[14]*tx**2*H*ycs + B[15]*tx**3*H*ycs + B[16]*tx**4*H*ycs + B[17]*tx**5*H*ycs + B[18]*ycs
  *         DTC300 = sum_             # <<<<<<<<<<<<<<
@@ -5434,7 +5434,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC300 = __pyx_v_sum_;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":436
+    /* "jb08/jb2008_subfuncs_cy.pyx":438
  *                B[13]*tx*H*ycs + B[14]*tx**2*H*ycs + B[15]*tx**3*H*ycs + B[16]*tx**4*H*ycs + B[17]*tx**5*H*ycs + B[18]*ycs
  *         DTC300 = sum_
  *         sum_ = B[12]*ycs + B[13]*tx*ycs + B[14]*tx**2*ycs + B[15]*tx**3*ycs + B[16]*tx**4*ycs + B[17]*tx**5*ycs             # <<<<<<<<<<<<<<
@@ -5443,7 +5443,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_sum_ = (((((((__pyx_v_B[12]) * __pyx_v_ycs) + (((__pyx_v_B[13]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_B[14]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_B[15]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_B[16]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs)) + (((__pyx_v_B[17]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":437
+    /* "jb08/jb2008_subfuncs_cy.pyx":439
  *         DTC300 = sum_
  *         sum_ = B[12]*ycs + B[13]*tx*ycs + B[14]*tx**2*ycs + B[15]*tx**3*ycs + B[16]*tx**4*ycs + B[17]*tx**5*ycs
  *         DTC300DZ = sum_             # <<<<<<<<<<<<<<
@@ -5452,7 +5452,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC300DZ = __pyx_v_sum_;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":438
+    /* "jb08/jb2008_subfuncs_cy.pyx":440
  *         sum_ = B[12]*ycs + B[13]*tx*ycs + B[14]*tx**2*ycs + B[15]*tx**3*ycs + B[16]*tx**4*ycs + B[17]*tx**5*ycs
  *         DTC300DZ = sum_
  *         CC = 3*DTC300 - DTC300DZ - 3*AA - 2*BB             # <<<<<<<<<<<<<<
@@ -5461,7 +5461,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_CC = ((((3.0 * __pyx_v_DTC300) - __pyx_v_DTC300DZ) - (3.0 * __pyx_v_AA)) - (2.0 * __pyx_v_BB));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":439
+    /* "jb08/jb2008_subfuncs_cy.pyx":441
  *         DTC300DZ = sum_
  *         CC = 3*DTC300 - DTC300DZ - 3*AA - 2*BB
  *         DD = DTC300 - AA - BB - CC             # <<<<<<<<<<<<<<
@@ -5470,7 +5470,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DD = (((__pyx_v_DTC300 - __pyx_v_AA) - __pyx_v_BB) - __pyx_v_CC);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":440
+    /* "jb08/jb2008_subfuncs_cy.pyx":442
  *         CC = 3*DTC300 - DTC300DZ - 3*AA - 2*BB
  *         DD = DTC300 - AA - BB - CC
  *         ZP  = (ZHT-240)/60             # <<<<<<<<<<<<<<
@@ -5479,7 +5479,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_ZP = ((__pyx_v_ZHT - 240.0) / 60.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":441
+    /* "jb08/jb2008_subfuncs_cy.pyx":443
  *         DD = DTC300 - AA - BB - CC
  *         ZP  = (ZHT-240)/60
  *         DTC = AA + BB*ZP + CC*ZP*ZP + DD*ZP*ZP*ZP             # <<<<<<<<<<<<<<
@@ -5488,7 +5488,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC = (((__pyx_v_AA + (__pyx_v_BB * __pyx_v_ZP)) + ((__pyx_v_CC * __pyx_v_ZP) * __pyx_v_ZP)) + (((__pyx_v_DD * __pyx_v_ZP) * __pyx_v_ZP) * __pyx_v_ZP));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":421
+    /* "jb08/jb2008_subfuncs_cy.pyx":423
  *         DTC = sum_
  * 
  *     if ZHT > 240 and ZHT <= 300.0:             # <<<<<<<<<<<<<<
@@ -5497,7 +5497,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":443
+  /* "jb08/jb2008_subfuncs_cy.pyx":445
  *         DTC = AA + BB*ZP + CC*ZP*ZP + DD*ZP*ZP*ZP
  * 
  *     if ZHT > 300 and ZHT <= 600:             # <<<<<<<<<<<<<<
@@ -5515,7 +5515,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_L13_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":444
+    /* "jb08/jb2008_subfuncs_cy.pyx":446
  * 
  *     if ZHT > 300 and ZHT <= 600:
  *         H = ZHT/100             # <<<<<<<<<<<<<<
@@ -5524,7 +5524,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_H = (__pyx_v_ZHT / 100.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":447
+    /* "jb08/jb2008_subfuncs_cy.pyx":449
  *         sum_ = B[0] + B[1]*F + B[2]*tx*F + B[3]*tx**2*F + B[4]*tx**3*F + B[5]*tx**4*F + B[6]*tx**5*F +\
  *                B[7]*tx*ycs + B[8]*tx**2*ycs + B[9]*tx**3*ycs + B[10]*tx**4*ycs + B[11]*tx**5*ycs + B[12]*H*ycs +\
  *                B[13]*tx*H*ycs + B[14]*tx**2*H*ycs + B[15]*tx**3*H*ycs + B[16]*tx**4*H*ycs + B[17]*tx**5*H*ycs + B[18]*ycs             # <<<<<<<<<<<<<<
@@ -5533,7 +5533,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_sum_ = (((((((((((((((((((__pyx_v_B[0]) + ((__pyx_v_B[1]) * __pyx_v_F)) + (((__pyx_v_B[2]) * __pyx_v_tx) * __pyx_v_F)) + (((__pyx_v_B[3]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F)) + (((__pyx_v_B[4]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_F)) + (((__pyx_v_B[5]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_F)) + (((__pyx_v_B[6]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_F)) + (((__pyx_v_B[7]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_B[8]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_B[9]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_B[10]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs)) + (((__pyx_v_B[11]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs)) + (((__pyx_v_B[12]) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[13]) * __pyx_v_tx) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[14]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[15]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[16]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((((__pyx_v_B[17]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_H) * __pyx_v_ycs)) + ((__pyx_v_B[18]) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":448
+    /* "jb08/jb2008_subfuncs_cy.pyx":450
  *                B[7]*tx*ycs + B[8]*tx**2*ycs + B[9]*tx**3*ycs + B[10]*tx**4*ycs + B[11]*tx**5*ycs + B[12]*H*ycs +\
  *                B[13]*tx*H*ycs + B[14]*tx**2*H*ycs + B[15]*tx**3*H*ycs + B[16]*tx**4*H*ycs + B[17]*tx**5*H*ycs + B[18]*ycs
  *         DTC = sum_             # <<<<<<<<<<<<<<
@@ -5542,7 +5542,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC = __pyx_v_sum_;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":443
+    /* "jb08/jb2008_subfuncs_cy.pyx":445
  *         DTC = AA + BB*ZP + CC*ZP*ZP + DD*ZP*ZP*ZP
  * 
  *     if ZHT > 300 and ZHT <= 600:             # <<<<<<<<<<<<<<
@@ -5551,7 +5551,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":450
+  /* "jb08/jb2008_subfuncs_cy.pyx":452
  *         DTC = sum_
  * 
  *     if ZHT > 600 and ZHT <= 800.0:             # <<<<<<<<<<<<<<
@@ -5569,7 +5569,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_L16_bool_binop_done:;
   if (__pyx_t_3) {
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":451
+    /* "jb08/jb2008_subfuncs_cy.pyx":453
  * 
  *     if ZHT > 600 and ZHT <= 800.0:
  *         ZP = (ZHT - 600)/100             # <<<<<<<<<<<<<<
@@ -5578,7 +5578,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_ZP = ((__pyx_v_ZHT - 600.0) / 100.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":452
+    /* "jb08/jb2008_subfuncs_cy.pyx":454
  *     if ZHT > 600 and ZHT <= 800.0:
  *         ZP = (ZHT - 600)/100
  *         HP = 6.             # <<<<<<<<<<<<<<
@@ -5587,7 +5587,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_HP = 6.;
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":455
+    /* "jb08/jb2008_subfuncs_cy.pyx":457
  *         AA = B[0] + B[1]*F + B[2]*tx*F + B[3]*tx**2*F + B[4]*tx**3*F + B[5]*tx**4*F + B[6]*tx**5*F +\
  *              B[7]*tx*ycs + B[8]*tx**2*ycs + B[9]*tx**3*ycs + B[10]*tx**4*ycs + B[11]*tx**5*ycs + B[12]*HP*ycs +\
  *              B[13]*tx*HP*ycs + B[14]*tx**2*HP*ycs+ B[15]*tx**3*HP*ycs + B[16]*tx**4*HP*ycs + B[17]*tx**5*HP*ycs + B[18]*ycs             # <<<<<<<<<<<<<<
@@ -5596,7 +5596,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_AA = (((((((((((((((((((__pyx_v_B[0]) + ((__pyx_v_B[1]) * __pyx_v_F)) + (((__pyx_v_B[2]) * __pyx_v_tx) * __pyx_v_F)) + (((__pyx_v_B[3]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_F)) + (((__pyx_v_B[4]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_F)) + (((__pyx_v_B[5]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_F)) + (((__pyx_v_B[6]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_F)) + (((__pyx_v_B[7]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_B[8]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_B[9]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_B[10]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs)) + (((__pyx_v_B[11]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs)) + (((__pyx_v_B[12]) * __pyx_v_HP) * __pyx_v_ycs)) + ((((__pyx_v_B[13]) * __pyx_v_tx) * __pyx_v_HP) * __pyx_v_ycs)) + ((((__pyx_v_B[14]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_HP) * __pyx_v_ycs)) + ((((__pyx_v_B[15]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_HP) * __pyx_v_ycs)) + ((((__pyx_v_B[16]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_HP) * __pyx_v_ycs)) + ((((__pyx_v_B[17]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_HP) * __pyx_v_ycs)) + ((__pyx_v_B[18]) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":456
+    /* "jb08/jb2008_subfuncs_cy.pyx":458
  *              B[7]*tx*ycs + B[8]*tx**2*ycs + B[9]*tx**3*ycs + B[10]*tx**4*ycs + B[11]*tx**5*ycs + B[12]*HP*ycs +\
  *              B[13]*tx*HP*ycs + B[14]*tx**2*HP*ycs+ B[15]*tx**3*HP*ycs + B[16]*tx**4*HP*ycs + B[17]*tx**5*HP*ycs + B[18]*ycs
  *         BB  = B[12]*ycs + B[13]*tx*ycs + B[14]*tx**2*ycs + B[15]*tx**3*ycs + B[16]*tx**4*ycs + B[17]*tx**5*ycs             # <<<<<<<<<<<<<<
@@ -5605,7 +5605,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_BB = (((((((__pyx_v_B[12]) * __pyx_v_ycs) + (((__pyx_v_B[13]) * __pyx_v_tx) * __pyx_v_ycs)) + (((__pyx_v_B[14]) * pow(__pyx_v_tx, 2.0)) * __pyx_v_ycs)) + (((__pyx_v_B[15]) * pow(__pyx_v_tx, 3.0)) * __pyx_v_ycs)) + (((__pyx_v_B[16]) * pow(__pyx_v_tx, 4.0)) * __pyx_v_ycs)) + (((__pyx_v_B[17]) * pow(__pyx_v_tx, 5.0)) * __pyx_v_ycs));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":457
+    /* "jb08/jb2008_subfuncs_cy.pyx":459
  *              B[13]*tx*HP*ycs + B[14]*tx**2*HP*ycs+ B[15]*tx**3*HP*ycs + B[16]*tx**4*HP*ycs + B[17]*tx**5*HP*ycs + B[18]*ycs
  *         BB  = B[12]*ycs + B[13]*tx*ycs + B[14]*tx**2*ycs + B[15]*tx**3*ycs + B[16]*tx**4*ycs + B[17]*tx**5*ycs
  *         CC  = -(3*AA+4*BB)/4             # <<<<<<<<<<<<<<
@@ -5614,7 +5614,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_CC = ((-((3.0 * __pyx_v_AA) + (4.0 * __pyx_v_BB))) / 4.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":458
+    /* "jb08/jb2008_subfuncs_cy.pyx":460
  *         BB  = B[12]*ycs + B[13]*tx*ycs + B[14]*tx**2*ycs + B[15]*tx**3*ycs + B[16]*tx**4*ycs + B[17]*tx**5*ycs
  *         CC  = -(3*AA+4*BB)/4
  *         DD  = (AA+BB)/4             # <<<<<<<<<<<<<<
@@ -5623,7 +5623,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DD = ((__pyx_v_AA + __pyx_v_BB) / 4.0);
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":459
+    /* "jb08/jb2008_subfuncs_cy.pyx":461
  *         CC  = -(3*AA+4*BB)/4
  *         DD  = (AA+BB)/4
  *         DTC = AA + BB*ZP + CC*ZP*ZP + DD*ZP*ZP*ZP             # <<<<<<<<<<<<<<
@@ -5632,7 +5632,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
     __pyx_v_DTC = (((__pyx_v_AA + (__pyx_v_BB * __pyx_v_ZP)) + ((__pyx_v_CC * __pyx_v_ZP) * __pyx_v_ZP)) + (((__pyx_v_DD * __pyx_v_ZP) * __pyx_v_ZP) * __pyx_v_ZP));
 
-    /* "jb08/jb2008_subfuncs_cy.pyx":450
+    /* "jb08/jb2008_subfuncs_cy.pyx":452
  *         DTC = sum_
  * 
  *     if ZHT > 600 and ZHT <= 800.0:             # <<<<<<<<<<<<<<
@@ -5641,7 +5641,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
  */
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":460
+  /* "jb08/jb2008_subfuncs_cy.pyx":462
  *         DD  = (AA+BB)/4
  *         DTC = AA + BB*ZP + CC*ZP*ZP + DD*ZP*ZP*ZP
  *     return DTC             # <<<<<<<<<<<<<<
@@ -5651,7 +5651,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   __pyx_r = __pyx_v_DTC;
   goto __pyx_L0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":361
+  /* "jb08/jb2008_subfuncs_cy.pyx":363
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef double DTSUB_cy(double F10, double XLST, double XLAT, double ZHT):             # <<<<<<<<<<<<<<
@@ -5664,7 +5664,7 @@ static double __pyx_f_4jb08_18jb2008_subfuncs_cy_DTSUB_cy(double __pyx_v_F10, do
   return __pyx_r;
 }
 
-/* "jb08/jb2008_subfuncs_cy.pyx":466
+/* "jb08/jb2008_subfuncs_cy.pyx":468
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef (double, double, double) SEMIAN08_cy(double DAY,double HT,double F10B,double S10B, double M10B):             # <<<<<<<<<<<<<<
@@ -5692,7 +5692,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
   int __pyx_t_3;
   __pyx_ctuple_double__and_double__and_double __pyx_t_4;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":483
+  /* "jb08/jb2008_subfuncs_cy.pyx":485
  *     DRLOG   (O)   DELTA LOG RHO
  *     '''
  *     TWOPI = 2*pi             # <<<<<<<<<<<<<<
@@ -5701,7 +5701,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_TWOPI = (2.0 * M_PI);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":487
+  /* "jb08/jb2008_subfuncs_cy.pyx":489
  *     # FZ GLOBAL MODEL VALUES
  *     # 1997-2006 FIT:
  *     cdef double[5] FZM = [0.2689,-0.01176, 0.02782,-0.02782, 0.3470e-3]             # <<<<<<<<<<<<<<
@@ -5715,7 +5715,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
   __pyx_t_1[4] = 0.3470e-3;
   memcpy(&(__pyx_v_FZM[0]), __pyx_t_1, sizeof(__pyx_v_FZM[0]) * (5));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":491
+  /* "jb08/jb2008_subfuncs_cy.pyx":493
  *     # GT GLOBAL MODEL VALUES
  *     # 1997-2006 FIT:
  *     cdef double[10] GTM = [-0.3633, 0.08506, 0.2401,-0.1897, -0.2554,-0.01790, 0.5650e-3,-0.6407e-3,-0.3418e-2,-0.1252e-2]             # <<<<<<<<<<<<<<
@@ -5734,7 +5734,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
   __pyx_t_2[9] = -0.1252e-2;
   memcpy(&(__pyx_v_GTM[0]), __pyx_t_2, sizeof(__pyx_v_GTM[0]) * (10));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":494
+  /* "jb08/jb2008_subfuncs_cy.pyx":496
  * 
  *     # COMPUTE NEW 81-DAY CENTERED SOLAR INDEX FOR FZ
  *     FSMB = F10B - 0.7*S10B - 0.04*M10B             # <<<<<<<<<<<<<<
@@ -5743,7 +5743,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_FSMB = ((__pyx_v_F10B - (0.7 * __pyx_v_S10B)) - (0.04 * __pyx_v_M10B));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":495
+  /* "jb08/jb2008_subfuncs_cy.pyx":497
  *     # COMPUTE NEW 81-DAY CENTERED SOLAR INDEX FOR FZ
  *     FSMB = F10B - 0.7*S10B - 0.04*M10B
  *     HTZ = HT/1e3             # <<<<<<<<<<<<<<
@@ -5752,7 +5752,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_HTZ = (__pyx_v_HT / 1e3);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":496
+  /* "jb08/jb2008_subfuncs_cy.pyx":498
  *     FSMB = F10B - 0.7*S10B - 0.04*M10B
  *     HTZ = HT/1e3
  *     FZZ = FZM[0] + FZM[1]*FSMB + FZM[2]*FSMB*HTZ + FZM[3]*FSMB*HTZ**2 + FZM[4]*FSMB**2*HTZ             # <<<<<<<<<<<<<<
@@ -5761,7 +5761,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_FZZ = (((((__pyx_v_FZM[0]) + ((__pyx_v_FZM[1]) * __pyx_v_FSMB)) + (((__pyx_v_FZM[2]) * __pyx_v_FSMB) * __pyx_v_HTZ)) + (((__pyx_v_FZM[3]) * __pyx_v_FSMB) * pow(__pyx_v_HTZ, 2.0))) + (((__pyx_v_FZM[4]) * pow(__pyx_v_FSMB, 2.0)) * __pyx_v_HTZ));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":499
+  /* "jb08/jb2008_subfuncs_cy.pyx":501
  * 
  *     # COMPUTE DAILY 81-DAY CENTERED SOLAR INDEX FOR GT
  *     FSMB = F10B - 0.75*S10B - 0.37*M10B             # <<<<<<<<<<<<<<
@@ -5770,7 +5770,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_FSMB = ((__pyx_v_F10B - (0.75 * __pyx_v_S10B)) - (0.37 * __pyx_v_M10B));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":501
+  /* "jb08/jb2008_subfuncs_cy.pyx":503
  *     FSMB = F10B - 0.75*S10B - 0.37*M10B
  * 
  *     TAU = (DAY-1)/365             # <<<<<<<<<<<<<<
@@ -5779,7 +5779,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_TAU = ((__pyx_v_DAY - 1.0) / 365.0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":502
+  /* "jb08/jb2008_subfuncs_cy.pyx":504
  * 
  *     TAU = (DAY-1)/365
  *     SIN1P = sin(TWOPI*TAU)             # <<<<<<<<<<<<<<
@@ -5788,7 +5788,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_SIN1P = sin((__pyx_v_TWOPI * __pyx_v_TAU));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":503
+  /* "jb08/jb2008_subfuncs_cy.pyx":505
  *     TAU = (DAY-1)/365
  *     SIN1P = sin(TWOPI*TAU)
  *     COS1P = cos(TWOPI*TAU)             # <<<<<<<<<<<<<<
@@ -5797,7 +5797,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_COS1P = cos((__pyx_v_TWOPI * __pyx_v_TAU));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":504
+  /* "jb08/jb2008_subfuncs_cy.pyx":506
  *     SIN1P = sin(TWOPI*TAU)
  *     COS1P = cos(TWOPI*TAU)
  *     SIN2P = sin(2*TWOPI*TAU)             # <<<<<<<<<<<<<<
@@ -5806,7 +5806,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_SIN2P = sin(((2.0 * __pyx_v_TWOPI) * __pyx_v_TAU));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":505
+  /* "jb08/jb2008_subfuncs_cy.pyx":507
  *     COS1P = cos(TWOPI*TAU)
  *     SIN2P = sin(2*TWOPI*TAU)
  *     COS2P = cos(2*TWOPI*TAU)             # <<<<<<<<<<<<<<
@@ -5815,7 +5815,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_COS2P = cos(((2.0 * __pyx_v_TWOPI) * __pyx_v_TAU));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":507
+  /* "jb08/jb2008_subfuncs_cy.pyx":509
  *     COS2P = cos(2*TWOPI*TAU)
  * 
  *     GTZ = GTM[0] + GTM[1]*SIN1P + GTM[2]*COS1P + GTM[3]*SIN2P + GTM[4]*COS2P + GTM[5]*FSMB + GTM[6]*FSMB*SIN1P + GTM[7]*FSMB*COS1P + GTM[8]*FSMB*SIN2P + GTM[9]*FSMB*COS2P             # <<<<<<<<<<<<<<
@@ -5824,7 +5824,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_GTZ = ((((((((((__pyx_v_GTM[0]) + ((__pyx_v_GTM[1]) * __pyx_v_SIN1P)) + ((__pyx_v_GTM[2]) * __pyx_v_COS1P)) + ((__pyx_v_GTM[3]) * __pyx_v_SIN2P)) + ((__pyx_v_GTM[4]) * __pyx_v_COS2P)) + ((__pyx_v_GTM[5]) * __pyx_v_FSMB)) + (((__pyx_v_GTM[6]) * __pyx_v_FSMB) * __pyx_v_SIN1P)) + (((__pyx_v_GTM[7]) * __pyx_v_FSMB) * __pyx_v_COS1P)) + (((__pyx_v_GTM[8]) * __pyx_v_FSMB) * __pyx_v_SIN2P)) + (((__pyx_v_GTM[9]) * __pyx_v_FSMB) * __pyx_v_COS2P));
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":508
+  /* "jb08/jb2008_subfuncs_cy.pyx":510
  * 
  *     GTZ = GTM[0] + GTM[1]*SIN1P + GTM[2]*COS1P + GTM[3]*SIN2P + GTM[4]*COS2P + GTM[5]*FSMB + GTM[6]*FSMB*SIN1P + GTM[7]*FSMB*COS1P + GTM[8]*FSMB*SIN2P + GTM[9]*FSMB*COS2P
  *     if FZZ < 1e-6: FZZ = 1e-6             # <<<<<<<<<<<<<<
@@ -5836,7 +5836,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
     __pyx_v_FZZ = 1e-6;
   }
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":509
+  /* "jb08/jb2008_subfuncs_cy.pyx":511
  *     GTZ = GTM[0] + GTM[1]*SIN1P + GTM[2]*COS1P + GTM[3]*SIN2P + GTM[4]*COS2P + GTM[5]*FSMB + GTM[6]*FSMB*SIN1P + GTM[7]*FSMB*COS1P + GTM[8]*FSMB*SIN2P + GTM[9]*FSMB*COS2P
  *     if FZZ < 1e-6: FZZ = 1e-6
  *     DRLOG = FZZ*GTZ             # <<<<<<<<<<<<<<
@@ -5845,7 +5845,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
  */
   __pyx_v_DRLOG = (__pyx_v_FZZ * __pyx_v_GTZ);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":511
+  /* "jb08/jb2008_subfuncs_cy.pyx":513
  *     DRLOG = FZZ*GTZ
  * 
  *     return FZZ,GTZ,DRLOG             # <<<<<<<<<<<<<<
@@ -5856,7 +5856,7 @@ static __pyx_ctuple_double__and_double__and_double __pyx_f_4jb08_18jb2008_subfun
   __pyx_r = __pyx_t_4;
   goto __pyx_L0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":466
+  /* "jb08/jb2008_subfuncs_cy.pyx":468
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cdef (double, double, double) SEMIAN08_cy(double DAY,double HT,double F10B,double S10B, double M10B):             # <<<<<<<<<<<<<<
@@ -5918,7 +5918,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
 }
 /* #### Code section: cached_builtins ### */
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 170, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 172, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -5929,17 +5929,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":12
+  /* "jb08/jb2008_subfuncs_cy.pyx":14
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cpdef jb2008_mod_cy(double AMJD, double YRDAY,             # <<<<<<<<<<<<<<
  *                     double SUN_RA, double SUN_DEC,
  *                     double SAT_RA, double SAT_LAT, double SAT_ALT,
  */
-  __pyx_tuple_ = PyTuple_Pack(16, __pyx_n_s_AMJD, __pyx_n_s_YRDAY, __pyx_n_s_SUN_RA, __pyx_n_s_SUN_DEC, __pyx_n_s_SAT_RA, __pyx_n_s_SAT_LAT, __pyx_n_s_SAT_ALT, __pyx_n_s_F10, __pyx_n_s_F10B, __pyx_n_s_S10, __pyx_n_s_S10B, __pyx_n_s_M10, __pyx_n_s_M10B, __pyx_n_s_Y10, __pyx_n_s_Y10B, __pyx_n_s_DSTDTC); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(16, __pyx_n_s_AMJD, __pyx_n_s_YRDAY, __pyx_n_s_SUN_RA, __pyx_n_s_SUN_DEC, __pyx_n_s_SAT_RA, __pyx_n_s_SAT_LAT, __pyx_n_s_SAT_ALT, __pyx_n_s_F10, __pyx_n_s_F10B, __pyx_n_s_S10, __pyx_n_s_S10B, __pyx_n_s_M10, __pyx_n_s_M10B, __pyx_n_s_Y10, __pyx_n_s_Y10B, __pyx_n_s_DSTDTC); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(16, 0, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_jb08_jb2008_subfuncs_cy_pyx, __pyx_n_s_jb2008_mod_cy, 12, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(16, 0, 0, 16, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_jb08_jb2008_subfuncs_cy_pyx, __pyx_n_s_jb2008_mod_cy, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -5949,8 +5949,8 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
 /* #### Code section: init_constants ### */
 
 static CYTHON_SMALL_CODE int __Pyx_InitConstants(void) {
-  if (__Pyx_CreateStringTabAndInitStrings() < 0) __PYX_ERR(0, 2, __pyx_L1_error);
-  __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_CreateStringTabAndInitStrings() < 0) __PYX_ERR(0, 1, __pyx_L1_error);
+  __pyx_int_1 = PyInt_FromLong(1); if (unlikely(!__pyx_int_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -6209,26 +6209,26 @@ static CYTHON_SMALL_CODE int __pyx_pymod_exec_jb2008_subfuncs_cy(PyObject *__pyx
   #else
   #if PY_MAJOR_VERSION < 3
   __pyx_m = Py_InitModule4("jb2008_subfuncs_cy", __pyx_methods, 0, 0, PYTHON_API_VERSION); Py_XINCREF(__pyx_m);
-  if (unlikely(!__pyx_m)) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #elif CYTHON_USE_MODULE_STATE
-  __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_t_1 = PyModule_Create(&__pyx_moduledef); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 1, __pyx_L1_error)
   {
     int add_module_result = PyState_AddModule(__pyx_t_1, &__pyx_moduledef);
     __pyx_t_1 = 0; /* transfer ownership from __pyx_t_1 to "jb2008_subfuncs_cy" pseudovariable */
-    if (unlikely((add_module_result < 0))) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (unlikely((add_module_result < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     pystate_addmodule_run = 1;
   }
   #else
   __pyx_m = PyModule_Create(&__pyx_moduledef);
-  if (unlikely(!__pyx_m)) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (unlikely(!__pyx_m)) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   #endif
   CYTHON_UNUSED_VAR(__pyx_t_1);
-  __pyx_d = PyModule_GetDict(__pyx_m); if (unlikely(!__pyx_d)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_d = PyModule_GetDict(__pyx_m); if (unlikely(!__pyx_d)) __PYX_ERR(0, 1, __pyx_L1_error)
   Py_INCREF(__pyx_d);
-  __pyx_b = __Pyx_PyImport_AddModuleRef(__Pyx_BUILTIN_MODULE_NAME); if (unlikely(!__pyx_b)) __PYX_ERR(0, 2, __pyx_L1_error)
-  __pyx_cython_runtime = __Pyx_PyImport_AddModuleRef((const char *) "cython_runtime"); if (unlikely(!__pyx_cython_runtime)) __PYX_ERR(0, 2, __pyx_L1_error)
-  if (PyObject_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_b = __Pyx_PyImport_AddModuleRef(__Pyx_BUILTIN_MODULE_NAME); if (unlikely(!__pyx_b)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_cython_runtime = __Pyx_PyImport_AddModuleRef((const char *) "cython_runtime"); if (unlikely(!__pyx_cython_runtime)) __PYX_ERR(0, 1, __pyx_L1_error)
+  if (PyObject_SetAttrString(__pyx_m, "__builtins__", __pyx_b) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #if CYTHON_REFNANNY
 __Pyx_RefNanny = __Pyx_RefNannyImportAPI("refnanny");
 if (!__Pyx_RefNanny) {
@@ -6239,30 +6239,30 @@ if (!__Pyx_RefNanny) {
 }
 #endif
   __Pyx_RefNannySetupContext("__Pyx_PyMODINIT_FUNC PyInit_jb2008_subfuncs_cy(void)", 0);
-  if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_check_binary_version(__PYX_LIMITED_VERSION_HEX, __Pyx_get_runtime_version(), CYTHON_COMPILING_IN_LIMITED_API) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pxy_PyFrame_Initialize_Offsets
   __Pxy_PyFrame_Initialize_Offsets();
   #endif
-  __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 2, __pyx_L1_error)
-  __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 2, __pyx_L1_error)
-  __pyx_empty_unicode = PyUnicode_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_unicode)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_empty_tuple = PyTuple_New(0); if (unlikely(!__pyx_empty_tuple)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_empty_bytes = PyBytes_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_bytes)) __PYX_ERR(0, 1, __pyx_L1_error)
+  __pyx_empty_unicode = PyUnicode_FromStringAndSize("", 0); if (unlikely(!__pyx_empty_unicode)) __PYX_ERR(0, 1, __pyx_L1_error)
   #ifdef __Pyx_CyFunction_USED
-  if (__pyx_CyFunction_init(__pyx_m) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__pyx_CyFunction_init(__pyx_m) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   #ifdef __Pyx_FusedFunction_USED
-  if (__pyx_FusedFunction_init(__pyx_m) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__pyx_FusedFunction_init(__pyx_m) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   #ifdef __Pyx_Coroutine_USED
-  if (__pyx_Coroutine_init(__pyx_m) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__pyx_Coroutine_init(__pyx_m) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   #ifdef __Pyx_Generator_USED
-  if (__pyx_Generator_init(__pyx_m) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__pyx_Generator_init(__pyx_m) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   #ifdef __Pyx_AsyncGen_USED
-  if (__pyx_AsyncGen_init(__pyx_m) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__pyx_AsyncGen_init(__pyx_m) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   #ifdef __Pyx_StopAsyncIteration_USED
-  if (__pyx_StopAsyncIteration_init(__pyx_m) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__pyx_StopAsyncIteration_init(__pyx_m) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   /*--- Library function declarations ---*/
   /*--- Threads initialization code ---*/
@@ -6270,27 +6270,27 @@ if (!__Pyx_RefNanny) {
   PyEval_InitThreads();
   #endif
   /*--- Initialize various global constants etc. ---*/
-  if (__Pyx_InitConstants() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_InitConstants() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   stringtab_initialized = 1;
-  if (__Pyx_InitGlobals() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_InitGlobals() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #if PY_MAJOR_VERSION < 3 && (__PYX_DEFAULT_STRING_ENCODING_IS_ASCII || __PYX_DEFAULT_STRING_ENCODING_IS_DEFAULT)
-  if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_init_sys_getdefaultencoding_params() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
   if (__pyx_module_is_main_jb08__jb2008_subfuncs_cy) {
-    if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+    if (PyObject_SetAttr(__pyx_m, __pyx_n_s_name, __pyx_n_s_main) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   }
   #if PY_MAJOR_VERSION >= 3
   {
-    PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 2, __pyx_L1_error)
+    PyObject *modules = PyImport_GetModuleDict(); if (unlikely(!modules)) __PYX_ERR(0, 1, __pyx_L1_error)
     if (!PyDict_GetItemString(modules, "jb08.jb2008_subfuncs_cy")) {
-      if (unlikely((PyDict_SetItemString(modules, "jb08.jb2008_subfuncs_cy", __pyx_m) < 0))) __PYX_ERR(0, 2, __pyx_L1_error)
+      if (unlikely((PyDict_SetItemString(modules, "jb08.jb2008_subfuncs_cy", __pyx_m) < 0))) __PYX_ERR(0, 1, __pyx_L1_error)
     }
   }
   #endif
   /*--- Builtin init code ---*/
-  if (__Pyx_InitCachedBuiltins() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_InitCachedBuiltins() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   /*--- Constants init code ---*/
-  if (__Pyx_InitCachedConstants() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_InitCachedConstants() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   /*--- Global type/function init code ---*/
   (void)__Pyx_modinit_global_init_code();
   (void)__Pyx_modinit_variable_export_code();
@@ -6301,30 +6301,29 @@ if (!__Pyx_RefNanny) {
   (void)__Pyx_modinit_function_import_code();
   /*--- Execution code ---*/
   #if defined(__Pyx_Generator_USED) || defined(__Pyx_Coroutine_USED)
-  if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":12
+  /* "jb08/jb2008_subfuncs_cy.pyx":14
  * @cython.nonecheck(False)
  * @cython.wraparound(False)
  * cpdef jb2008_mod_cy(double AMJD, double YRDAY,             # <<<<<<<<<<<<<<
  *                     double SUN_RA, double SUN_DEC,
  *                     double SAT_RA, double SAT_LAT, double SAT_ALT,
  */
-  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4jb08_18jb2008_subfuncs_cy_1jb2008_mod_cy, 0, __pyx_n_s_jb2008_mod_cy, NULL, __pyx_n_s_jb08_jb2008_subfuncs_cy, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 12, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_CyFunction_New(&__pyx_mdef_4jb08_18jb2008_subfuncs_cy_1jb2008_mod_cy, 0, __pyx_n_s_jb2008_mod_cy, NULL, __pyx_n_s_jb08_jb2008_subfuncs_cy, __pyx_d, ((PyObject *)__pyx_codeobj__2)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jb2008_mod_cy, __pyx_t_2) < 0) __PYX_ERR(0, 12, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_jb2008_mod_cy, __pyx_t_2) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "jb08/jb2008_subfuncs_cy.pyx":2
+  /* "jb08/jb2008_subfuncs_cy.pyx":1
+ * #cythonize JB2008             # <<<<<<<<<<<<<<
  * 
- * from libc.math cimport sin, cos, fabs, exp, log, log10, copysign, atan             # <<<<<<<<<<<<<<
- * from libc.math cimport pi
  * 
  */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 2, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(0); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 2, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_test, __pyx_t_2) < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
   /*--- Wrapped vars code ---*/
